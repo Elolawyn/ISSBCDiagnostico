@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Título</title>
+        <meta name="description" content="Descripción">
+        <meta name="author" content="Raúl Arroyo Lubián, Pedro Daniel López González, Alfonso Lacalle García">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' +
+                ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <style>
+            .reveal h1,.reveal h2,.reveal h3,.reveal h4{
+                text-shadow: 0 1px 0 #FFFFFF;
+                color: rgba(0, 0, 0, 0.8);
+            }
+            ol.twocols{
+                column-count: 2;
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                -o-column-count: 2;
+                width: 90%;
+            }
+            div.slides .key{
+                background: none repeat scroll 0 0 #FFFFFF;
+                border-radius: 10px 10px 10px 10px;
+                border: 1px #000 solid;
+                color: #000000;
+                display: inline-block;
+                font: 13px/30px 'Molengo';
+                letter-spacing: 0;
+                margin: 0 8px !important;
+                padding: 2px 10px!important;
+                position: relative;
+                text-shadow: none;
+                vertical-align: top;
+                /*vertical-align: sub;*/
+            }
+
+            aside.notes{
+                position: absolute;
+                top:0;
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+                font-size: 0.8em;
+                text-align: left;
+                white-space: pre-line;
+                background: #333;
+                border: #444;
+            }
+
+            pre.result{
+                /*background-color: #333;*/
+                background-color: #fff;
+                padding: 5px;
+            }
+
+            .pre 
+            {
+                position: relative;
+                width: 60%;
+                background: #ddd;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                padding: 2em 1.5em;
+                color: rgba(0,0,0, .8);
+                line-height: 1.5;
+                margin: 60px auto;
+            }
+
+
+            pre:before, pre:after 
+            {
+                z-index: -1; 
+                position: absolute; 
+                content: "";
+                bottom: 15px;
+                left: 10px;
+                width: 50%; 
+                top: 50%;
+                max-width:400px;
+                background: rgba(0, 0, 0, 0.5); 
+                -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.5);   
+                -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+                -webkit-transform: rotate(-3deg);    
+                -moz-transform: rotate(-3deg);   
+                -o-transform: rotate(-3deg);
+                -ms-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+            }
+
+            pre:after 
+            {
+                -webkit-transform: rotate(3deg);
+                -moz-transform: rotate(3deg);
+                -o-transform: rotate(3deg);
+                -ms-transform: rotate(3deg);
+                transform: rotate(3deg);
+                right: 10px;
+                left: auto;
+            }
+            
+            div.slides figure img{
+                padding: 10px;
+                background: #fff;
+                border: 3px #686868 solid;
+            }
+        </style>
+        <style media="only screen and (max-width: 480px)">
+            ol.twocols{
+                column-count: 1;
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                -o-column-count: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>Título</h1>
+                        <p>
+                            <small>Raúl Arroyo Lubián / 
+                            i02arlur@uco.es</small>
+                        </p>
+                        <p>
+                            <small>Pedro Daniel López González / 
+                            i02logop@uco.es</small>
+                        </p>
+                        <p>
+                            <small>Alfonso Lacalle García / 
+                            i52lagaa@uco.es</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Controles</h3>
+                        <p>Puedes navegar con <span class="key">→</span> y <span class="key">ESPACIO</span></p>
+                        <p>Con <span class="key">Ctrl</span>+<span class="key">MOUSE IZQ</span> puedes hacer zoom</p>
+                        <p><span class="key">ESC</span> para ver un overview de la presentación</p>
+                        <p><span class="key">D</span> para mostrar las notas</p>
+                    </section>
+                    <section>
+                        <p>Esta presentación esta realizada con <a target="blank" href="https://github.com/hakimel/reveal.js">reveal.js</a> de <a target="blank" href="http://hakim.se/">Hakim El Hattab</a></p>
+                    </section>
+                </section>
+                <section id="indice">
+                	<h2>Índice</h2>
+                	<ol>
+						<li><a href="#/bibliografia">Bibliografía y recursos</a></li>
+					</ol>
+                </section>
+                <section id="bibliografia">
+                	<h2>Bibliografía</h2>
+                	<ol>
+						<li></li>
+					</ol>
+                </section>
+                <!--<section id="indice">
+                	<h2>Índice</h2>
+                	<ol>
+                		<li>
+							<ol>
+								<li><a href="#/seccion1">Introducción</a></li>
+								<li><a href="#/subseccion1_1">¿Qué es?</a></li>
+								<li><a href="#/subseccion1_2">Origen</a></li>
+								<li><a href="#/subseccion1_3">Objetivos</a></li>
+								<li><a href="#/subseccion1_4">Funcionalidad</a></li>
+							</ol>
+						</li>
+						<li>
+							<ol>
+								<li><a href="#/seccion2">Proceso de desarrollo</a></li>
+								<li><a href="#/subseccion2_1">Modelo de casos de uso</a></li>
+								<li><a href="#/subseccion2_2">Modelo de contenido</a></li>
+								<li><a href="#/subseccion2_3">Modelo de usuarios</a></li>
+								<li><a href="#/subseccion2_4">Modelo de navegación</a></li>
+							</ol>
+						</li>
+						<li><a href="#/seccion3">Presentación de la aplicación</a></li>
+						<li>
+							<ol>
+								<li><a href="#/seccion4">Conclusiones</a></li>
+								<li><a href="#/subseccion4_1">Retos</a></li>
+								<li><a href="#/subseccion4_2">Relación con otras asignaturas</a></li>
+								<li><a href="#/subseccion4_3">Objetivos logrados</a></li>
+								<li><a href="#/subseccion4_4">Conocimiento adquirido</a></li>
+							</ol>
+						</li>
+						<li><a href="#/seccion5">Bibliografía y recursos</a></li>
+					</ol>
+                </section>
+                <section id="seccion1">
+                	<section>
+                		<h2>Introducción</h2>
+                	</section>
+                	<section id="subseccion1_1">
+                		<h2>Introducción</h2>
+                		<h3>¿Qué es?</h3>
+                		<br>
+                		<p><strong>“Takara Hunter”</strong> es una aplicación web, a modo de juego, destinada a buscar tesoros en un mapamundi. Las personas
+                			que accedan a esta aplicación podrán visualizar un mapamundi y ver los tesoros situados cerca de su localización,
+                			los cuales podrá “cazar” y obtener puntos.</p>
+                	</section>
+                	<section id="subseccion1_2">
+                		<h2>Introducción</h2>
+                		<h3>Origen</h3>
+                		<br>
+						<p><strong>“Takara Hunter”</strong>, es una fusión entre idiomas de sus palabras. Por un lado tenemos <strong>“Takara”</strong> que significa 
+							<strong>“Tesoro”</strong> en japonés y consideramos un nombre acertado y oportuno para nuestra aplicación web. En segundo 
+							lugar, tenemos <strong>“Hunter”</strong> que significa <strong>“Cazador”</strong> en inglés. El nombre completo en el que hemos querido 
+							basarnos es <strong>“Búsqueda del tesoro”</strong> o <strong>“Cazador de tesoros”</strong>.</p>
+                	</section>
+                	<section id="subseccion1_3">
+                		<h2>Introducción</h2>
+                		<h3>Objetivos</h3>
+                		<br>
+                		<ul>
+                			<li>Fomentar el turismo de las 	personas por todo el mundo.</li>
+                            <li>Mejorar la imagen de la empresa y generar publicidad.</li>
+                            <li>Generar un ocio saludable gracias al turismo.</li>
+                            <li>Fomentar el uso de las nuevas tecnologías.</li>
+                            <li>Obtener beneficios de forma indirecta a través de la aplicación.</li>
+                            <li>Potenciar la capacidad exploradora del ser humano.</li>
+                		</ul>
+                	</section>
+                	<section id="subseccion1_4">
+                		<h2>Introducción</h2>
+                		<h3>Funcionalidad</h3>
+                		<br>
+                		<ul>
+                			<li>La aplicación permitirá crear búsquedas del tesoro donde todos los usuarios registrados pueden participar.</li>
+                			<li>Sólo el administrador puede crear búsquedas de tesoros. Las búsquedas no se pueden modificar ni borrar.</li>
+                			<li>En la parte privada, el usuario registrado accederá al perfil así como a las últimas rutas modificadas o creadas y a las últimas búsquedas en las que esté participando.</li>
+						</ul>
+                	</section>
+                	<section>
+                		<h2>Introducción</h2>
+                		<h3>Funcionalidad</h3>
+                		<br>
+                		<ul>
+                			<li>El usuario registrado tiene acceso a un hall de la fama de cazadores de tesoros.</li>
+                			<li>Un usuario obtiene un tesoro cuando está a una distancia de 20 metros o menos del mismo.</li>
+						</ul>
+                	</section>
+                </section>
+                <section id="seccion2">
+                	<section>
+                		<h2>Proceso de desarrollo</h2>
+                	</section>
+                	<section id="subseccion2_1">
+                		<h2>Proceso de desarrollo</h2>
+                		<h3>Modelo de casos de uso</h3>
+                		<figure><img class="" title="Modelo de casos de uso" src="img/model_usecase.png" height="600px"/></figure>
+                	</section>
+                	<section id="subseccion2_2">
+                		<h2>Proceso de desarrollo</h2>
+                		<h3>Modelo de contenido</h3>
+                		<figure><img class="" title="Modelo de contenido" src="img/model_content.png"/></figure>
+                	</section>
+                	<section id="subseccion2_3">
+                		<h2>Proceso de desarrollo</h2>
+                		<h3>Modelo de usuarios</h3>
+                		<figure><img class="" title="Modelo de usuarios" src="img/model_user.png"/></figure>
+                	</section>
+                	<section id="subseccion2_4">
+                		<h2>Proceso de desarrollo</h2>
+                		<h3>Modelo de navegación</h3>
+                		<figure><img class="" title="Modelo de navegación" src="img/model_navigation.png"/></figure>
+                	</section>
+                </section>
+                <section id="seccion3">
+                	<h2>Presentación de la aplicación</h2>
+                	<figure><img class="" title="Captura de la aplicación" src="img/aplicacion.png" height="500px"/></figure>
+                </section>
+                <section id="seccion4">
+                	<section>
+                		<h2>Conclusiones</h2>
+                	</section>
+                	<section id="subseccion4_1">
+                		<h2>Conclusiones</h2>
+                		<h3>Retos</h3>
+                	</section>
+                	<section id="subseccion4_2">
+                		<h2>Conclusiones</h2>
+                		<h3>Relación con otras asignaturas</h3>
+                	</section>
+                	<section id="subseccion4_3">
+                		<h2>Conclusiones</h2>
+                		<h3>Objetivos logrados</h3>
+                	</section>
+                	<section id="subseccion4_4">
+                		<h2>Conclusiones</h2>
+                		<h3>Conocimiento adquirido</h3>
+                	</section>
+                </section>
+                <section id="seccion5">
+                	<section>
+                		<h2>Bibliografía y recursos</h2>
+                	</section>
+                	<section>
+                		<h2>Bibliografía y recursos</h2>
+                		<br>
+                		<ol>
+                			<li><a href="https://www.djangoproject.com/">Web Framework - Django</a></li>
+                			<li><a href="http://www.aptana.com/">Web Development IDE - Aptana Studio</a></li>
+                			<li><a href="http://git-scm.com/">Version Control - Git</a></li>
+                			<li><a href="https://github.com/">Version Control - GitHub</a></li>
+                			<li><a href="http://jquery.com/">Javascript Library - JQuery</a></li>
+                			<li><a href="http://twitter.github.io/bootstrap/">Front-End Framework - Twitter Bootstrap </a></li>
+                			<li><a href="https://developers.google.com/maps/?hl=es">API - Google Maps API V3</a></li>
+                			<li><a href="http://www.w3.org/html/wg/drafts/html/master/">Web Language - HTML5</a></li>
+                			<li><a href="http://www.w3.org/TR/css-2010/">Web Language - CSS3</a></li>
+                			<li><a href="http://www.w3schools.com/js/default.asp">Web Language - Javascript</a></li>
+                		</ol>
+                	</section>
+                </section>-->
+                <section>
+                	<h2>Fin</h2>
+                	<h3>Gracias por asistir a la presentación</h3>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script type="text/javascript">
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                //default/sky/beige/night/simple/serif
+                theme: 'beige', //Reveal.getQueryHash().theme, // available themes are in /css/theme
+                // default/cube/page/concave/zoom/linear/none
+                transition: 'concave', //Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    //{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+            document.addEventListener( 'keydown', function( event ) {
+                if( event.keyCode =='68'){
+                    var notes=document.getElementsByTagName('aside');
+                    for(x in notes){
+                        var note=notes[x];
+                        if(note.style && note.className==="notes"){
+                            note.style.display = (note.style.display == 'none') ? 'block' : 'none';
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
