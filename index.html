@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta charset='utf-8'>
-		<title>Título</title>
+		<title>T&iacute;tulo</title>
 		<!-- Base del conocimiento --> 	
 		<script src="knowledge/Selector_Coches.js" type="text/javascript" charset="utf-8"></script>
 		<!--<script src="knowledge/Diagnostico_Arte.js" type="text/javascript" charset="utf-8"></script>-->
@@ -26,11 +26,11 @@
 	<body>
 		<div data-role="page" id="page1">
 			<div data-theme="b" data-role="header" data-position="fixed">
-				<h5>Título</h5>
+				<h5>T&iacute;tulo</h5>
 				<div data-role="navbar" data-iconpos="top">
 					<ul>
 						<li><a id="nextquestion" href="#page1" data-theme="">Cuestionario no preparado</a></li>
-						<li><a id="explanation" href="#page1" data-theme="">Esperando información</a></li>
+						<li><a id="explanation" href="#page1" data-theme="">Esperando informaci&oacute;n</a></li>
 					</ul>
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 			<div data-role="navbar" data-iconpos="bot" data-position="fixed">
 				<ul>
 					<li><a id="initquestions" href="#page1" data-theme="b">Iniciar questionario</a></li>
-					<li><a id="about" href="#page1" data-theme="b">Sobre la aplicación</a></li>
+					<li><a id="about" href="#page1" data-theme="b">Sobre la aplicaci&oacute;n</a></li>
 				</ul>
 			</div>
 		</div>
@@ -158,9 +158,9 @@
 			{
 				ree.initEvaluation();
 				$("#initquestions span").text("Reiniciar cuestionario");
-				container.html('<p>Se ha preparado el cuestionario. Presione el boton <b>"Siguiente pregunta"</b> para avanzar.</p>'+'<p>Si se equivoca y quiere volver a comenzar, presione <b>"Reiniciar cuestionario"</b>.</p>'+'<p>Una vez que haya alcanzado una conclusión puede recibir una explicación de dicha conclusión al pulsar <b>"Explicación"</b>.</p>');
+				container.html('<p>Se ha preparado el cuestionario. Presione el bot&oacute;n <b>"Siguiente pregunta"</b> para avanzar.</p>'+'<p>Si se equivoca y quiere volver a comenzar, presione <b>"Reiniciar cuestionario"</b>.</p>'+'<p>Una vez que haya alcanzado una conclusi&oacute;n puede recibir una explicaci&oacute;n de dicha conclusi&oacute;n al pulsar <b>"Explicaci&oacute;n"</b>.</p>');
 				$("#nextquestion span").text("Siguiente pregunta");
-				$("#explanation span").text("Esperando información");
+				$("#explanation span").text("Esperando informaci&oacute;n");
 			});
 			
 			// Proxima pregunta o solucion si el motor la ha encontrado
@@ -189,7 +189,7 @@
 			// Pestaña "sobre nosotros"
 			$("#about").click(function()
 			{
-				container.html('<p><b>Sobre la aplicación</b></p>'+'<p>Esta aplicación y su motor de inferencia fueron implementados por Jose Manuel Ayala Wilson el 25 de Junio de 2012.</p>'+'<p>Esta aplicación está licenciada bajo la <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL v3</a>.</p>'+'<p>Pueden descargarse en su <a href="http://jmaw.blogspot.com.es/">blog</a> o en la <a href="https://code.google.com/p/js-ree/">página del proyecto en Google Code</a>.</p>'+'<p><b>Sobre la base del conocimiento</b></p>'+'<p>La base del conocimiento sobre blablabla fueron realizadas por.. rellenar con nuestros nombres</p>');
+				container.html('<p><b>Sobre la aplicaci&oacute;n</b></p>'+'<p>Esta aplicaci&oacute;n y su motor de inferencia fueron implementados por Jose Manuel Ayala Wilson el 25 de Junio de 2012.</p>'+'<p>Esta aplicaci&oacute;n est&aacute; licenciada bajo la <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL v3</a>.</p>'+'<p>Pueden descargarse en su <a href="http://jmaw.blogspot.com.es/">blog</a> o en la <a href="https://code.google.com/p/js-ree/">p&aacute;gina del proyecto en Google Code</a>.</p>'+'<p><b>Sobre la base del conocimiento</b></p>'+'<p>La base del conocimiento sobre blablabla fueron realizadas por.. rellenar con nuestros nombres</p>');
 			});		
 		</script>
 	</body>
