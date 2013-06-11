@@ -1,2 +1,0 @@
-\select@language {spanish}
-\contentsline {section}{\numberline {1}Secci\IeC {\'o}n}{2}{section.1}
