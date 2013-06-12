@@ -1,0 +1,282 @@
+%********************************************************************************************************
+%  Tipo de documento
+%********************************************************************************************************
+\documentclass[a4paper,11pt]{article}
+%********************************************************************************************************
+%  Paquetes empleados
+%********************************************************************************************************
+\usepackage[utf8]{inputenc} % Esto es para poder escribir acentos directamente
+\usepackage[spanish]{babel} % Esto es para que el LaTeX sepa que el texto está en español
+\usepackage{amsmath, amsthm, amsfonts} % Paquetes de la AMS
+\usepackage{fancyhdr}
+\usepackage{enumerate} % Paquete de enumeraciones
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{colortbl}
+
+% Renombrando
+\renewcommand\tablename{Tabla}
+\renewcommand\figurename{Figura}
+\renewcommand\contentsname{Tabla de contenidos}
+\renewcommand\refname{Bibliografí­a}
+
+\pagestyle{fancy}
+\fancyhf{}
+% En lo siguiente, fancyhead sirve para configurar la cabecera, fancyfoot para el pie.
+% Justificación: C=centered, R=right, L=left, (nada)=LRC
+% PÃ¡gina: O=odd, E=even, (nada)=OE
+\fancyhead[C]{\rightmark}
+\fancyhead[C]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% Modifica el ancho de las lí­neas de cabecera y pie
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{1.5\headheight} % Aumenta la altura del encabezado en una vez y media
+
+
+%********************************************************************************************************
+\begin{document}
+    %***************************************************************************************************
+	%  Portada
+	%***************************************************************************************************
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=375px]{Universidad.png} 
+            \includegraphics[width=275px]{logo_cordosoft.png} 
+			\textbf{\LARGE Documento de Visión y Ámbito}
+			\\
+			\textbf{}
+			\\
+			\textbf{Autores}
+			\\
+			\textbf{}
+			\\
+			\begin{tabular}{l l}
+				\textbf{Raul Arroyo Lubián} & \textbf{i02arlur@uco.es} \\	
+				\textbf{Pedro Daniel López González} & \textbf{i02logop@uco.es} \\
+				\textbf{Jesús Pérez Navarro} & \textbf{i02penaj@uco.es} \\
+				\textbf{Jesús Rodríguez Pérez} & \textbf{i02roprj@uco.es} \\
+				\textbf{Antonio Ángel Sánchez Arroyo} & \textbf{i82saara@uco.es} \\
+				\textbf{Rafael Carlos Soriano Mármol} & \textbf{i02somar@uco.es} \\
+			\end{tabular}
+			\\
+			\textbf{}
+			\\
+			\textbf{}
+			\\
+			\begin{tabular}{l l}
+				\textbf{Fecha de creación:} & \textbf{11 de marzo de 2013} \\
+				\textbf{Fecha de última modificación:} & \textbf{6 de abril de 2013} \\
+			\end{tabular}
+		\end{center}
+    \end{titlepage}
+	\newpage
+	%***************************************************************************************************
+	%  Indice
+	%***************************************************************************************************
+	\tableofcontents
+	\pagenumbering{arabic}
+	\newpage
+	%***************************************************************************************************
+	% Contenido
+	%***************************************************************************************************
+	\section{Requerimientos del Negocio}
+		\subsection{Contexto}
+			Nuestra empresa ha sido contratada por una empresa de restauración llamada “La Tapa Virtual” con el objetivo de 			desarrollar un sistema software que les ayude en sus objetivos.\\
+
+			Se pretende crear un sistema para la gestión de un bar de tapas con videoconsolas instaladas en algunas mesas. 				Además de llevar un control de las bebidas y tapas se deberá controlar el tiempo que los consumidores pasan en 					las mesas donde hay videoconsolas instaladas.\\
+
+			Hasta ahora el proceso de ventas de consumiciones se realizaba a través de un TPV y el tiempo de juego era  					gestionado por un “game master”, este proceso se hacía de forma manual, por lo que se desperdiciaba bastante 					tiempo y no llevaba ningún registro de la gestión de partidas.\\
+			
+			Los clientes han solicitado un producto con la finalidad de automatizar y optimizar los procesos de venta de 					consumiciones y gestión de tiempos de juego en la empresa. Además, como futuras funcionalidades se pueden 					desarrollar módulos para gestión de facturas, comandas y contabilidad.
+		\subsection{Oportunidades de Negocio}
+			La implantación de nuestro sistema permitirá mejorar el sistema de control del tiempo de juego con lo que se 					respetarán mejor los tiempos. Actualmente no existe ningún software con las características requeridas por el 					cliente por lo que no se puede comparar con otros software al ser personalizado y su modelo de negocio 						novedoso. Sin este producto, los usuarios no tienen ningún control automatizado de la gestión del tiempo de 					juego de sus clientes, ya que hasta la fecha este proceso se ha tratado de manera rudimentaria y manual.
+		\subsection{Objetivos de Negocio y Criterios de Éxito}
+			\begin{center}
+				\begin{tabular}{l p{11cm}}
+					\textbf{BO-1:} & \textbf{Mejorar la productividad hasta un 75\% frente a la actual.} \\
+					\textbf{BO-2:} & \textbf{Reducir el coste de mantenimiento del sistema de juego en un 40\% o 											más.} \\
+					\textbf{BO-3:} & \textbf{Reducir el tiempo de gestión de los procesos hasta en un 75\%.} \\
+				\end{tabular}
+			\end{center}
+			\textbf{Nota:} BO = Business Objective (Objetivos de Negocio)
+			\begin{center}
+				\begin{tabular}{l p{11cm}}
+					\textbf{SC-1:} & \textbf{El periodo que necesitan los empleados para aprender a utilizar todas las 											funcionalidades del sistema debe ser de un plazo máximo de 2 meses.}\\
+					\textbf{SC-2:} & \textbf{Aumentar la productividad de los empleados un 50\%.} \\
+					\textbf{SC-3:} & \textbf{Reducir los errores de gestión de la contabilidad en un 75\%.} \\
+				\end{tabular}
+			\end{center}
+			\textbf{Nota:} SC = Success Criteria (Criterios de Éxito)
+		\subsection{Necesidades del Cliente/Mercado}
+			Los clientes necesitan llevar un control de las ventas de consumiciones además de la gestión de facturas, 						descuentos, ofertas. Otra función a destacar es la gestión del tiempo de juego, puesto que actualmente este 					proceso se encuentra realizado de manera rudimentaria.\\
+
+			Puede ser de utilidad la posibilidad de añadir nuevos platos y cambiar los precios de las consumiciones. Además,   					se deberá gestionar el tiempo de juego asignado a cada tipo de consumición.\\
+
+			Como funcionalidad añadida, el sistema deberá generar una serie de informes y gestionar la contabilidad y 					facturación.
+			
+			\begin{itemize}
+				\item \textbf{Ejemplo de utilización del sistema de comandas:} el usuario “camarero” seleccionará la 								comanda de una lista que incluirá toda la carta de consumiciones. La solicitud será transmitida 							al sistema central. El usuario “cocinero” consultará la lista de solicitudes. El usuario “cocinero” 								indicará como “listo” cuando se realice una comanda. El sistema informará al usuario 									“camarero” de que dispone de comandas para entregar. Una vez entregada la comanda, el 								usuario “camarero” marcará como entregada la comanda. Los datos de la solicitud se 									almacenarán en el sistema para posteriores informes o consultas.
+				\item \textbf{Ejemplo de utilización del sistema de juego:} de manera simultánea a la solicitud de un 								pedido, el sistema asignará al cliente el tiempo de juego estipulado según el tipo de comanda, 							en uno de los espacios de juego marcados como libres del local. Una vez que el usuario active el 							sistema (videoconsola o equipo informático), el espacio de juego pasa a estar marcado como 								“ocupado” y se mostrará en la pantalla el tiempo de juego del que dispone. Una vez finalizado el 							tiempo, el estado del espacio de juego será marcado como “libre” y la pantalla del sistema se 								oscurecerá, finalizando de manera adecuada los procesos en ejecución.  Se enviará un aviso al 							sistema de que el espacio asignado se encuentra marcado como “libre”.
+			\end{itemize}
+			\newpage
+		\subsection{Riesgos de Negocio}
+			\textbf{Nota:} el impacto se encuentra en una escala de 0 a 10, siendo 0 “impacto nulo” y 10 “impacto crítico”.
+			\begin{center}
+				\begin{tabular}{l p{11cm}}
+					\textbf{RI-1:} & \textbf{Puede que un mismo empleado ahora pueda cubrir varios roles. 												(Probabilidad = 30\%; Impacto = 5)}\\
+					\textbf{RI-2:} & \textbf{Si no se llevara a cabo el producto, habría errores en los pedidos de las 											comandas. (Probabilidad = 50\%; Impacto = 8)} \\
+					\textbf{RI-3:} & \textbf{Si no se llevara a cabo el producto, habría errores de contabilidad. 												(Probabilidad = 85\%; Impacto = 9)} \\
+					\textbf{RI-4:} & \textbf{Si no se llevara a cabo el producto, habría errores en la gestión del tiempo 											de juego. (Probabilidad = 75\%; Impacto = 8)} \\
+				\end{tabular}
+			\end{center}
+	\newpage
+	\section{Visión de la Solución}
+		\subsection{Declaración de la Visión}
+			Para los camareros que desean automatizar el proceso de gestión de comandas y de tiempo de juego el SGTV 					(Sistema de Gestión de la Tapa Virtual) es una aplicación basada en una intranet local que gestionará las 						comandas, tiempo de partidas y contabilidad, facturación e informes detallados. A diferencia del método actual 					de gestión del tiempo de partidas y de comandas, nuestro producto automatizará dichos procesos en un único 					sistema de manera eficiente y veloz.
+		\subsection{Características Principales}
+			\begin{center}
+				\begin{tabular}{l p{11cm}}
+					\textbf{FE-1:} & \textbf{Gestión de la venta de consumiciones y formas de pago.}\\
+					\textbf{FE-2:} & \textbf{Creación, modificación y eliminación de consumiciones.} \\
+					\textbf{FE-3:} & \textbf{Gestión de los tiempos de juego por consumición.} \\
+					\textbf{FE-4:} & \textbf{Gestión de los gastos del negocio relativos a la alimentación.}\\
+					\textbf{FE-5:} & \textbf{Gestión de los gastos del negocio relativos al sistema de juego.} \\
+					\textbf{FE-6:} & \textbf{Creación de ofertas.} \\
+					\textbf{FE-7:} & \textbf{Gestión de facturas.}\\
+				\end{tabular}
+			\end{center}
+			\textbf{Nota:} FE = Features (Características)
+		\subsection{Suposiciones y Dependencias}
+			\begin{center}
+				\begin{tabular}{l p{11cm}}
+					\textbf{AS-1:} & \textbf{El sistema y las videoconsolas estarán siempre conectados intranet.}\\
+					\textbf{AS-2:} & \textbf{El sistema debe poseer una interfaz similar a la del anterior sistema 												implementado.} \\
+					\textbf{AS-3:} & \textbf{El sistema de gestión de tiempo de juego controlará el tiempo mediante un 										dispositivo físico en los monitores.} \\
+				\end{tabular}
+			\end{center}
+			\textbf{Nota:} AS = Assumptions (Suposiciones)
+			\begin{center}
+				\begin{tabular}{l p{11cm}}
+					\textbf{DE-1:} & \textbf{El sistema estará siempre tendrá alimentación eléctrica.}\\
+					\textbf{DE-2:} & \textbf{El sistema hará uso de sistemas cerrados pertenecientes a terceras 											empresas, como PS3 o XBOX  que no permiten modificaciones.} \\
+				\end{tabular}
+			\end{center}
+	\section{Alcance y Limitaciones}
+		\subsection{Ámbito de la Versión Inicial}
+			Las principales características que se incluirán en la versión inicial del producto se resumen en la gestión básica del 			negocio así como la gestión de facturas y el control de tiempo de los puestos de juego. Se puede ver mejor 					descrito en el siguiente punto.
+		\subsection{Alcance de las Versiones Posteriores}
+			\begin{center}
+				\begin{tabular}{| l | p{3cm} | p{3cm} | p{3cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{FE} & \cellcolor[RGB]{224,233,250}\textbf{Versión 1} & 							\cellcolor[RGB]{224,233,250}\textbf{Versión 2} & \cellcolor[RGB]{224,233,250}\textbf{Versión 3} 							\\
+					\hline
+					\textbf{FE-1:} & \textbf{Completamente implementado.} & &  \\
+					\hline
+					\textbf{FE-2:} & \textbf{No implementado.} & 														\textbf{Completamente implementado.} &  \\
+					\hline
+					\textbf{FE-3:} & \textbf{Completamente implementado.} & &  \\
+					\hline
+					\textbf{FE-4:} & \textbf{No implementado.} & \textbf{Completamente implementado.} &  \\
+					\hline
+					\textbf{FE-5:} & \textbf{No implementado.} & \textbf{Completamente implementado.} &  \\
+					\hline
+					\textbf{FE-6:} & \textbf{No implementado.} & \textbf{Completamente implementado.} &  \\
+					\hline
+					\textbf{FE-7:} & \textbf{Completamente implementado.} & &  \\
+					\hline
+				\end{tabular}
+			\end{center}
+			\textbf{Nota:} FE = Features (Características)
+		\subsection{Limitaciones y Exclusiones}
+			\begin{center}
+				\begin{tabular}{l p{11cm}}
+					\textbf{LI-1:} & \textbf{Puede que en un determinado momento todos los puestos de juego estén 											ocupados. El sistema ha de asignar prioridades a las asignaciones de 											puestos o descartar tiempos.}\\
+					\textbf{LI-2:} & \textbf{El sistema de gestión de tiempos solo puede ser aplicable a ciertas 												comandas.} \\
+					\textbf{LI-3:} & \textbf{El sistema sólo puede ser aplicable al negocio Tapa Virtual.} \\
+				\end{tabular}
+			\end{center}
+	\section{Contexto de Negocio}
+		\subsection{Perfiles de las Partes Interesadas}
+			\begin{center}
+				\begin{tabular}{| p{2,4cm} | p{2,4cm} | p{2cm} | p{2,1cm} | p{2,5cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{Participante} & \cellcolor[RGB]{224,233,250}\textbf{Mayor 							valor} & \cellcolor[RGB]{224,233,250}\textbf{Actitudes} & \cellcolor[RGB]										{224,233,250}\textbf{Mayores intereses} & \cellcolor[RGB]{224,233,250}\textbf{Restricciones} \\
+					\hline
+					\textbf{Gerencia} & \textbf{Mejorar el control de tiempo de juego; aumentar la productividad.} & 							\textbf{Gran interés en la producción del sistema de control de tiempo.} & \textbf{Reducción de 							costes y fallos de contabilidad. } & \textbf{Ninguna identificada.} \\
+					\hline
+					\textbf{Camareros} & \textbf{Ahorro de tiempo en la gestión de comandas.} & \textbf{A favor de 							implantar el sistema ya que les libera de cierto trabajo.} & \textbf{Mantener su empleo.} & 								\textbf{Sistema con una interfaz similar al anterior.} \\
+					\hline
+					\textbf{Game Masters} & \textbf{Gestionar con facilidad los puestos de juegos y el tiempo de 							juego.} & \textbf{Muy entusiasmado por la implantación del sistema.} & \textbf{Simplicidad de uso y 					precisión en los tiempos.} & \textbf{Puede necesitar generar reportes de problemas.} \\
+					\hline
+					\textbf{Cocineros} & \textbf{Ahorro de tiempo en la gestión de comandas.} & \textbf{Receptivos 							aunque el sistema sólo aporta ventajas a otros grupos. } & \textbf{Cambios mínimos con respecto al 					sistema actual.} & \textbf{Ninguna identificada.} \\
+					\hline
+				\end{tabular}
+			\end{center}
+		\subsection{Prioridades del Proyecto}
+			\begin{center}
+				\begin{tabular}{| l | p{2,7cm} | p{2,7cm} | p{2,6cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{Dimensión} & \cellcolor[RGB]{224,233,250}									\textbf{Conductor} & \cellcolor[RGB]{224,233,250}\textbf{Restricciones} & \cellcolor[RGB]								{224,233,250}\textbf{Grados de} \\
+					\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250} & \							\cellcolor[RGB]{224,233,250}\textbf{libertad} \\
+					\hline
+					\textbf{Horario} &  & & \textbf{La versión 1 está prevista para su entrega en 4 meses. La versión 2 										está prevista para  2 meses más tarde.} \\
+					\hline
+					\textbf{Características} & & \textbf{Es necesario que todas las funcionalidades de ambas versiones 											estén operativas en la fecha de entrega.} & \\
+					\hline
+					\textbf{Calidad} & & \textbf{Debe pasar un 80\% de los test de aceptación. Debe cumplir las 												características de seguridad en transacciones bancarias.} &  \\
+					\hline
+					\textbf{Personal} & \textbf{Grupo de 6 personas, con diferentes responsabilidades según las 												capacidades que poseen.} &  & \\
+					\hline
+					\textbf{Coste} & & \textbf{Reducir los costes de desarrollo al mínimo.} & \\
+					\hline
+				\end{tabular}
+			\end{center}
+		\subsection{Entorno Operativo}
+			El entorno del sistema está caracterizado por:
+			\begin{itemize}
+				\item Los usuarios están en el mismo local.
+				\item La información se genera y se utiliza en el mismo local.
+				\item No se usarán datos de otras ubicaciones.
+				\item Las interrupciones no son catastróficas pero sería deseable evitarlas.
+				\item Para el acceso a los datos se necesitará una contraseña.
+				\item Periódicamente se realizará una copia de seguridad de los datos. 
+			\end{itemize}
+    \newpage
+    \section{Historial de versiones}
+        \begin{center}
+            \begin{tabular}{| c | l | c |}
+    			\hline
+				\cellcolor[RGB]{224,233,250}\textbf{Versión} & \cellcolor[RGB]{224,233,250}\textbf{Revisada por} & 						\cellcolor[RGB]{224,233,250}\textbf{Fecha} \\
+				\hline
+				\textbf{0.1} & \textbf{Rafael Soriano} & \textbf{4 de marzo de 2013} \\
+				 & \textbf{Jesús Rodríguez} &  \\
+				\hline
+				\textbf{0.5} & \textbf{Jesús Rodríguez} & \textbf{11 de marzo de 2013} \\
+				 & \textbf{Antonio Sánchez} &  \\
+				 & \textbf{Jesús Pérez} &  \\
+				 & \textbf{Raúl Arroyo} &  \\
+				 & \textbf{Rafael Soriano} &  \\
+				\hline
+				\textbf{0.8} & \textbf{Antonio Sánchez} & \textbf{19 de marzo de 2013} \\
+				 & \textbf{Jesús Rodríguez} &  \\
+				 & \textbf{Raúl Arroyo} &  \\
+				\hline
+				\textbf{0.9} & \textbf{Antonio Sánchez} & \textbf{25 de marzo de 2013} \\
+				 & \textbf{Raúl Arroyo} &  \\
+				\hline
+				\textbf{1.0} & \textbf{Raúl Arroyo} & \textbf{27 de marzo de 2013} \\
+				\hline
+				\textbf{1.1} & \textbf{Raúl Arroyo} & \textbf{6 de abril de 2013} \\
+				 & \textbf{Jesús Rodríguez} &  \\
+				\hline
+			\end{tabular}
+        \end{center}
+	%\newpage
+	%***************************************************************************************************
+	%  BibliografÃ­a
+	%***************************************************************************************************
+	%\begin{thebibliography}{99}	
+	%\end{thebibliography}
+\end{document}
