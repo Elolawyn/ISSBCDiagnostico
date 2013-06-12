@@ -8,13 +8,12 @@
 \usepackage[utf8]{inputenc} % Esto es para poder escribir acentos directamente
 \usepackage[spanish]{babel} % Esto es para que el LaTeX sepa que el texto está en español
 \usepackage{amsmath, amsthm, amsfonts} % Paquetes de la AMS
-\usepackage{fancyhdr} % Paquete de cabeceras y pie de páginas bonitos
+\usepackage{fancyhdr}
 \usepackage{enumerate} % Paquete de enumeraciones
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{colortbl}
 
-%********************************************************************************************************
 % Renombrando
 \renewcommand\tablename{Tabla}
 \renewcommand\figurename{Figura}
@@ -25,7 +24,7 @@
 \fancyhf{}
 % En lo siguiente, fancyhead sirve para configurar la cabecera, fancyfoot para el pie.
 % Justificación: C=centered, R=right, L=left, (nada)=LRC
-% Página: O=odd, E=even, (nada)=OE
+% PÃ¡gina: O=odd, E=even, (nada)=OE
 \fancyhead[C]{\rightmark}
 \fancyhead[C]{\leftmark}
 \fancyfoot[C]{\thepage}
@@ -35,19 +34,17 @@
 \renewcommand{\footrulewidth}{0.4pt}
 \setlength{\headheight}{1.5\headheight} % Aumenta la altura del encabezado en una vez y media
 
+
 %********************************************************************************************************
 \begin{document}
-	%****************************************************************************************************
-	% Portada
-	%****************************************************************************************************
+    %***************************************************************************************************
+	%  Portada
+	%***************************************************************************************************
 	\begin{titlepage}
 		\begin{center}
-			\includegraphics[width=375px]{Universidad.png} 
-            \includegraphics[width=275px]{logo_cordosoft.png}
-			\textbf{\LARGE Documento de especificación}\\
-			\textbf{\Large Sistema de diagnóstico}\\
-			\textbf{Restauración/Conservación de pintura al temple al huevo sobre tabla
-			sin entelar}\\
+			\includegraphics[width=375px]{Universidad.png} \\
+            \includegraphics[width=275px]{logo_cordosoft.png} \\
+			\textbf{\LARGE Título}
 			\\
 			\textbf{}
 			\\
@@ -58,7 +55,7 @@
 			\begin{tabular}{l l}
 				\textbf{Raul Arroyo Lubián} & \textbf{i02arlur@uco.es} \\	
 				\textbf{Pedro Daniel López González} & \textbf{i02logop@uco.es} \\
-				\textbf{Alfonso Lacalle García} & \textbf{i52lagaar@uco.es} \\
+				\textbf{Alfonso Lacalle García} & \textbf{i52lagaa@uco.es} \\
 			\end{tabular}
 			\\
 			\textbf{}
@@ -72,16 +69,15 @@
 		\end{center}
     \end{titlepage}
 	\newpage
-	%****************************************************************************************************
-	% Indice
-	%****************************************************************************************************
+	%***************************************************************************************************
+	%  Indice
+	%***************************************************************************************************
 	\tableofcontents
 	\pagenumbering{arabic}
 	\newpage
-	%****************************************************************************************************
+	%***************************************************************************************************
 	% Contenido
-	%****************************************************************************************************
-	\section{Sección}
-    Hola
+	%***************************************************************************************************
+	\section{HOLA}
+	HOLA
 \end{document}
-%********************************************************************************************************
