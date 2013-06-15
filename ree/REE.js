@@ -82,14 +82,13 @@ RulesEvaluationEngine.prototype.Logica = function()
 
 RulesEvaluationEngine.prototype.initEvaluation = function()
 {
+	
   // No facts stated
   
   for(var i=0;i<this.__facts.length;i++){
 	  this.__facts[i].__selected = false;
   }		
-
   // Initial facts
-  
   for(var i=0;i<this.__statefirst.length;i++){
       for(var j=0;j<this.__facts;j++){
 	      if (this.__statefirst[i] == this.__facts[i].__id){
