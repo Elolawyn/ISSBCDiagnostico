@@ -115,6 +115,31 @@ var knowledge = {
 			info:[
 				'Si',
 				'No',]},
+		{qid:7,
+			qtext:'¿Cómo es el perfil del cuadro?',
+			qdesc:
+			'<p>Compruebe el perfil del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Zona con grueso de pintura craquelada',
+				'Zona con grueso de pintura craquelada y con laguna faltante',
+				'Ninguna de las anteriores',]},
+		{qid:8,
+			qtext:'¿Cómo se lija?',
+			qdesc:
+			'<p>Lije un resto de la capa de preparación a la que le falte pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Se lija fácilmente',
+				'Se lija con dificultad',]},
+		{qid:9,
+			qtext:'¿Cómo se lija?',
+			qdesc:
+			'<p>Lije un resto de la capa de preparación a la que le falte pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Se lija fácilmente',
+				'Se lija con dificultad',]},
 	],
 
 	//////////////////////////////////////////////////////////////////////////////
@@ -205,14 +230,14 @@ var knowledge = {
 	// La función ask(Numero) establece la siguiente pregunta.
 	//////////////////////////////////////////////////////////////////////////////
 	rules:[
-		////////////////////////////////////////////////// BLOQUE MENU /////////////////////////////////////////
+		////////////////////////////////////////////////// BLOQUE MENU //////////////////////////////////////////////
 		{rid:0,cond: 'q(0) == "Elaborar hipótesis"',
 		iftrue:'ask(1)',
 		iffalse:''},
 		{rid:1,cond: 'q(0) == "Comprobar hipótesis"',
 		iftrue:'ask(2)',
 		iffalse:''},
-		////////////////////////////////////////////////// BLOQUE FALLOS /////////////////////////////////////////
+		////////////////////////////////////////////////// BLOQUE FALLOS ////////////////////////////////////////////
 		{rid:2,cond: 'q(1) == "El cuadro tiene un tono anormal"',
 		iftrue:'final(1);set(12);set(13);set(20);set(21);set(22);set(24);',
 		iffalse:''},
@@ -269,11 +294,35 @@ var knowledge = {
 		{rid:19,cond: 'q(6) == "Si"',
 		iftrue:'final(28);',
 		iffalse:'final(52);'},
+		////////////////////////////////////////////////// HIPOTESIS 5 //////////////////////////////////////////////
+		{rid:20,cond: 'q(2) == "La pintura esté empastada"',
+		iftrue:'ask(7);',
+		iffalse:''},
+		{rid:21,cond: 'q(7) == "Zona con grueso de pintura craquelada" | q(7) == "Zona con grueso de pintura craquelada y con laguna faltante"',
+		iftrue:'final(29);',
+		iffalse:'final(53);'},
+		////////////////////////////////////////////////// HIPOTESIS 6 //////////////////////////////////////////////
+		{rid:22,cond: 'q(2) == "Falta aglutinante en la capa de preparación"',
+		iftrue:'ask(8);',
+		iffalse:''},
+		{rid:23,cond: 'q(8) == "Se lija fácilmente"',
+		iftrue:'final(30);',
+		iffalse:'final(54);'},
+		////////////////////////////////////////////////// HIPOTESIS 7 //////////////////////////////////////////////
+		{rid:24,cond: 'q(2) == "Sobra aglutinante en la capa de preparación"',
+		iftrue:'ask(9);',
+		iffalse:''},
+		{rid:25,cond: 'q(9) == "Se lija con dificultad"',
+		iftrue:'final(31);',
+		iffalse:'final(55);'},
+		////////////////////////////////////////////////// HIPOTESIS 8 //////////////////////////////////////////////
+		{rid:26,cond: 'q(2) == "Se han usado los nudos y la médula del árbol como soporte"',
+		iftrue:'ask(10);',
+		iffalse:''},
+		{rid:27,cond: 'q(10) == "Se lija con dificultad"',
+		iftrue:'final(32);',
+		iffalse:'final(56);'},
 		/*
-'La pintura esté empastada'
-'Falta aglutinante en la capa de preparación'
-'Sobra aglutinante en la capa de preparación'
-'Se han usado los nudos y la médula del árbol como soporte'
 'Se han oxidado de elementos metálicos del soporte'
 'Se han usado refuerzos para impedir el movimiento'
 'Hongos atacado la pintura'
