@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Sistema de Evaluación de Reglas
+// Sistema de Evaluacion de Reglas
 //------------------------------------------------------------------------------
-// Máquina de inferencia simple con encadenamiento hacia adelante.
-// Versión 0.1 Beta
+// Maquina de inferencia simple con encadenamiento hacia adelante.
+// Version 0.1 Beta
 // Escrito por J.M. Ayala Wilson.
 //------------------------------------------------------------------------------
 // Base del conocimiento para 
@@ -23,14 +23,14 @@ var knowledge = {
 	// Definicion de las preguntas
 	questions:[
 		{qid:0,
-			qtext:'Seleccione el módulo de la aplicación',
+			qtext:'Seleccione el modulo de la aplicacion',
 			qdesc:
-			'<p><b>Elaborar hipótesis:</b> el sistema elabora unas hipótesis a partir de un fallo indicado.</p>' +
-			'<p><b>Comprobar hipótesis:</b> el sistema pide información para comprobar las hipótesis.</p>',
+			'<p><b>Elaborar hipotesis:</b> el sistema elabora unas hipotesis a partir de un fallo indicado.</p>' +
+			'<p><b>Comprobar hipotesis:</b> el sistema pide informacion para comprobar las hipotesis.</p>',
 			qtype:'selection',
 			info:[
-				'Elaborar hipótesis',
-				'Comprobar hipótesis',]},
+				'Elaborar hipotesis',
+				'Comprobar hipotesis',]},
 		{qid:1,
 			qtext:'Indique el fallo que se ve en la obra',
 			qdesc:'',
@@ -38,15 +38,15 @@ var knowledge = {
 			info:[
 				'El cuadro tiene un tono anormal',
 				'La pintura destiñe',
-				'La pintura está craquelada',
-				'La pintura está caída',
+				'La pintura esta craquelada',
+				'La pintura esta caida',
 				'La pintura se disgrega',
 				'Hay elementos indeseables en la pintura',
-				'La pintura está curvada o alabeada',
+				'La pintura esta curvada o alabeada',
 				'El color del soporte ha cambiado',
 				'El estado del soporte ha cambiado',]},
 		{qid:2,
-			qtext:'Indique la hipótesis a comprobar',
+			qtext:'Indique la hipotesis a comprobar',
 			qdesc:'',
 			qtype:'selection',
 			info:[
@@ -54,20 +54,20 @@ var knowledge = {
 				'No se han mezclado los colores bien con el agua al usar un colorante',
 				'Hay poco aglutinante en la mezcla',
 				'Hay un exceso de aglutinante',
-				'La pintura esté empastada',
-				'Falta aglutinante en la capa de preparación',
-				'Sobra aglutinante en la capa de preparación',
-				'Se han usado los nudos y la médula del árbol como soporte',
-				'Se han oxidado de elementos metálicos del soporte',
+				'La pintura este empastada',
+				'Falta aglutinante en la capa de preparacion',
+				'Sobra aglutinante en la capa de preparacion',
+				'Se han usado los nudos y la medula del arbol como soporte',
+				'Se han oxidado de elementos metalicos del soporte',
 				'Se han usado refuerzos para impedir el movimiento',
-				'Hongos atacado la pintura',
-				'Algún mamífero hay defecado en la pintura',
-				'Algún ave hay defecado en la pintura',
+				'Los hongos han atacado la pintura',
+				'Algun mamifero ha defecado en la pintura',
+				'Algun ave ha defecado en la pintura',
 				'Los hongos han atacado el soporte',
-				'Los hongos xilófagos han atacado el soporte',
-				'El soporte ha sido afectado por pudrición parda',
-				'El soporte ha sido afectado por pudrición blanda',
-				'El soporte ha sido afectado por pudrición blanca',
+				'Los hongos xilofagos han atacado el soporte',
+				'El soporte ha sido afectado por pudricion parda',
+				'El soporte ha sido afectado por pudricion blanda',
+				'El soporte ha sido afectado por pudricion blanca',
 				'El soporte ha sido afectado por insectos',
 				'El barniz se ha oxidado',
 				'Se ha depositado polvo encima del barniz',
@@ -75,18 +75,18 @@ var knowledge = {
 				'La pintura se ha sometido a calor continuado',
 				'Se ha quemado el cuadro',]},
 		{qid:3,
-			qtext:'¿Cuál es el tono del cuadro?',
+			qtext:'¿Cual es el tono del cuadro?',
 			qdesc:
 			'<p>Compruebe la tonalidad del cuadro.</p>',
 			qtype:'selection',
 			info:[
-				'Tono translúcido',
+				'Tono translucido',
 				'Tono amarillento',
 				'Tono opaco',
 				'Tono negro',
 				'Otro tono',]},
 		{qid:4,
-			qtext:'¿De qué color tiene la mano manchada?',
+			qtext:'¿De que color tiene la mano manchada?',
 			qdesc:
 			'<p>Pase la mano por la superficie del cuadro.</p>',
 			qtype:'selection',
@@ -97,7 +97,7 @@ var knowledge = {
 				'Mano manchada de otro color',
 				'Mano manchada con varios colores',]},
 		{qid:5,
-			qtext:'¿De qué color tiene la mano manchada?',
+			qtext:'¿De que color tiene la mano manchada?',
 			qdesc:
 			'<p>Pase la mano por la superficie del cuadro.</p>',
 			qtype:'selection',
@@ -116,7 +116,7 @@ var knowledge = {
 				'Si',
 				'No',]},
 		{qid:7,
-			qtext:'¿Cómo es el perfil del cuadro?',
+			qtext:'¿Como es el perfil del cuadro?',
 			qdesc:
 			'<p>Compruebe el perfil del cuadro.</p>',
 			qtype:'selection',
@@ -125,21 +125,219 @@ var knowledge = {
 				'Zona con grueso de pintura craquelada y con laguna faltante',
 				'Ninguna de las anteriores',]},
 		{qid:8,
-			qtext:'¿Cómo se lija?',
+			qtext:'¿Como se lija?',
 			qdesc:
-			'<p>Lije un resto de la capa de preparación a la que le falte pintura.</p>',
+			'<p>Lije un resto de la capa de preparacion a la que le falte pintura.</p>',
 			qtype:'selection',
 			info:[
-				'Se lija fácilmente',
+				'Se lija facilmente',
 				'Se lija con dificultad',]},
 		{qid:9,
-			qtext:'¿Cómo se lija?',
+			qtext:'¿Como se lija?',
 			qdesc:
-			'<p>Lije un resto de la capa de preparación a la que le falte pintura.</p>',
+			'<p>Lije un resto de la capa de preparacion a la que le falte pintura.</p>',
 			qtype:'selection',
 			info:[
-				'Se lija fácilmente',
+				'Se lija facilmente',
 				'Se lija con dificultad',]},
+		{qid:10,
+			qtext:'¿Ves un hueco grande y ovalado?',
+			qdesc:
+			'<p>Comprueba la capa de soporte del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:11,
+			qtext:'¿Hay algun objeto metalico oxidado debajo de la zona abultada o craquelada?',
+			qdesc:
+			'<p>Comprueba la capa de soporte del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:12,
+			qtext:'¿Tiene el cuadro refuerzos por detras?',
+			qdesc:
+			'<p>Mire la parte trasera del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:13,
+			qtext:'¿Hay manchas de color gris o azulado en la pintura?',
+			qdesc:
+			'<p>Mire la pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:14,
+			qtext:'¿Hay pelusilla en la pintura?',
+			qdesc:
+			'<p>Mire la pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:15,
+			qtext:'¿Presenta manchas secas o bolitas pequeñas oscuras?',
+			qdesc:
+			'<p>Mire la pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Bolitas oscuras',
+				'Manchas secas',]},
+		{qid:16,
+			qtext:'¿Presenta manchas secas o bolitas pequeñas oscuras?',
+			qdesc:
+			'<p>Mire la pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Bolitas oscuras',
+				'Manchas secas',]},
+		{qid:17,
+			qtext:'¿Hay manchas de color gris o azulado en el soporte?',
+			qdesc:
+			'<p>Mire el soporte.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:18,
+			qtext:'¿Hay manchas de color gris o azulado en el soporte?',
+			qdesc:
+			'<p>Mire el soporte.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:19,
+			qtext:'¿Pesa menos el cuadro?',
+			qdesc:
+			'<p>Compruebe el soporte.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:20,
+			qtext:'¿De que color es el soporte?',
+			qdesc:
+			'<p>Mire el soporte.</p>',
+			qtype:'selection',
+			info:[
+				'Marron oscuro',
+				'Blanquecino',
+				'Otro color',]},
+		{qid:21,
+			qtext:'¿El soporte esta gelatinoso?',
+			qdesc:
+			'<p>Compruebe el soporte.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:22,
+			qtext:'¿De que color es el soporte?',
+			qdesc:
+			'<p>Mire el soporte.</p>',
+			qtype:'selection',
+			info:[
+				'Marron oscuro',
+				'Blanquecino',
+				'Otro color',]},
+		{qid:23,
+			qtext:'¿Tiene el soporte agujeros limpios y de forma circular o eliptica?',
+			qdesc:
+			'<p>Compruebe el soporte.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:24,
+			qtext:'¿Cual es el tono del cuadro?',
+			qdesc:
+			'<p>Compruebe la tonalidad del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Tono translucido',
+				'Tono amarillento',
+				'Tono opaco',
+				'Tono negro',
+				'Otro tono',]},
+		{qid:25,
+			qtext:'¿Se ha manchado la bayeta?',
+			qdesc:
+			'<p>Pasa una bayeta por la superficie del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:26,
+			qtext:'¿Cual es el tono del cuadro?',
+			qdesc:
+			'<p>Compruebe la tonalidad del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Tono translucido',
+				'Tono amarillento',
+				'Tono opaco',
+				'Tono negro',
+				'Otro tono',]},
+		{qid:27,
+			qtext:'¿Se ha manchado la bayeta?',
+			qdesc:
+			'<p>Pasa una bayeta por la superficie del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:28,
+			qtext:'¿Cual es el tono del cuadro?',
+			qdesc:
+			'<p>Compruebe la tonalidad del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Tono translucido',
+				'Tono amarillento',
+				'Tono opaco',
+				'Tono negro',
+				'Otro tono',]},
+		{qid:29,
+			qtext:'¿El cuadro tiene zonas donde se ha caido la pintura o esta carbonizada?',
+			qdesc:
+			'<p>Compruebe la pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:30,
+			qtext:'¿La pintura tiene ampollas o burbujas?',
+			qdesc:
+			'<p>Compruebe la pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
+		{qid:31,
+			qtext:'¿Cual es el tono del cuadro?',
+			qdesc:
+			'<p>Compruebe la tonalidad del cuadro.</p>',
+			qtype:'selection',
+			info:[
+				'Tono translucido',
+				'Tono amarillento',
+				'Tono opaco',
+				'Tono negro',
+				'Otro tono',]},
+		{qid:32,
+			qtext:'¿El cuadro tiene zonas donde se ha caido la pintura o esta carbonizada?',
+			qdesc:
+			'<p>Compruebe la pintura.</p>',
+			qtype:'selection',
+			info:[
+				'Si',
+				'No',]},
 	],
 
 	//////////////////////////////////////////////////////////////////////////////
@@ -150,20 +348,20 @@ var knowledge = {
 		{fid:2 ,ftext:'Puede que no se hayan mezclado los colores bien con el agua al usar un colorante'},
 		{fid:3 ,ftext:'Puede que haya poco aglutinante en la mezcla'},
 		{fid:4 ,ftext:'Puede que haya un exceso de aglutinante'},
-		{fid:5 ,ftext:'Puede que la pintura esté empastada'},
-		{fid:6 ,ftext:'Puede que falte aglutinante en la capa de preparación'},
-		{fid:7 ,ftext:'Puede que sobre aglutinante en la capa de preparación'},
-		{fid:8 ,ftext:'Puede que se hayan usado los nudos y la médula del árbol como soporte'},
-		{fid:9 ,ftext:'Puede que se haya oxidado de elementos metálicos del soporte'},
+		{fid:5 ,ftext:'Puede que la pintura este empastada'},
+		{fid:6 ,ftext:'Puede que falte aglutinante en la capa de preparacion'},
+		{fid:7 ,ftext:'Puede que sobre aglutinante en la capa de preparacion'},
+		{fid:8 ,ftext:'Puede que se hayan usado los nudos y la medula del arbol como soporte'},
+		{fid:9 ,ftext:'Puede que se haya oxidado de elementos metalicos del soporte'},
 		{fid:10,ftext:'Puede que se hayan usado refuerzos para impedir el movimiento'},
 		{fid:11,ftext:'Puede que hongos hayan atacado la pintura'},
-		{fid:12,ftext:'Puede que algún mamífero haya defecado en la pintura'},
-		{fid:13,ftext:'Puede que algún ave haya defecado en la pintura'},
+		{fid:12,ftext:'Puede que algun mamifero haya defecado en la pintura'},
+		{fid:13,ftext:'Puede que algun ave haya defecado en la pintura'},
 		{fid:14,ftext:'Puede que los hongos hayan atacado el soporte'},
-		{fid:15,ftext:'Puede que los hongos xilófagos hayan atacado el soporte'},
-		{fid:16,ftext:'Puede que el soporte haya sido afectado por pudrición parda'},
-		{fid:17,ftext:'Puede que el soporte haya sido afectado por pudrición blanda'},
-		{fid:18,ftext:'Puede que el soporte haya sido afectado por pudrición blanca'},
+		{fid:15,ftext:'Puede que los hongos xilofagos hayan atacado el soporte'},
+		{fid:16,ftext:'Puede que el soporte haya sido afectado por pudricion parda'},
+		{fid:17,ftext:'Puede que el soporte haya sido afectado por pudricion blanda'},
+		{fid:18,ftext:'Puede que el soporte haya sido afectado por pudricion blanca'},
 		{fid:19,ftext:'Puede que el soporte haya sido afectado por insectos'},
 		{fid:20,ftext:'Puede que el barniz se haya oxidado'},
 		{fid:21,ftext:'Puede que se haya depositado polvo encima del barniz'},
@@ -174,20 +372,20 @@ var knowledge = {
 		{fid:26,ftext:'Que no se hayan mezclado los colores bien con el agua al usar un colorante es VERDAD'},
 		{fid:27,ftext:'Que haya poco aglutinante en la mezcla es VERDAD'},
 		{fid:28,ftext:'Que haya un exceso de aglutinante es VERDAD'},
-		{fid:29,ftext:'Que la pintura esté empastada es VERDAD'},
-		{fid:30,ftext:'Que falte aglutinante en la capa de preparación es VERDAD'},
-		{fid:31,ftext:'Que sobre aglutinante en la capa de preparación es VERDAD'},
-		{fid:32,ftext:'Que se hayan usado los nudos y la médula del árbol como soporte es VERDAD'},
-		{fid:33,ftext:'Que se haya oxidado de elementos metálicos del soporte es VERDAD'},
+		{fid:29,ftext:'Que la pintura este empastada es VERDAD'},
+		{fid:30,ftext:'Que falte aglutinante en la capa de preparacion es VERDAD'},
+		{fid:31,ftext:'Que sobre aglutinante en la capa de preparacion es VERDAD'},
+		{fid:32,ftext:'Que se hayan usado los nudos y la medula del arbol como soporte es VERDAD'},
+		{fid:33,ftext:'Que se haya oxidado de elementos metalicos del soporte es VERDAD'},
 		{fid:34,ftext:'Que se hayan usado refuerzos para impedir el movimiento es VERDAD'},
 		{fid:35,ftext:'Que hongos hayan atacado la pintura es VERDAD'},
-		{fid:36,ftext:'Que algún mamífero haya defecado en la pintura es VERDAD'},
-		{fid:37,ftext:'Que algún ave haya defecado en la pintura es VERDAD'},
+		{fid:36,ftext:'Que algun mamifero haya defecado en la pintura es VERDAD'},
+		{fid:37,ftext:'Que algun ave haya defecado en la pintura es VERDAD'},
 		{fid:38,ftext:'Que los hongos hayan atacado el soporte es VERDAD'},
-		{fid:39,ftext:'Que los hongos xilófagos hayan atacado el soporte es VERDAD'},
-		{fid:40,ftext:'Que el soporte haya sido afectado por pudrición parda es VERDAD'},
-		{fid:41,ftext:'Que el soporte haya sido afectado por pudrición blanda es VERDAD'},
-		{fid:42,ftext:'Que el soporte haya sido afectado por pudrición blanca es VERDAD'},
+		{fid:39,ftext:'Que los hongos xilofagos hayan atacado el soporte es VERDAD'},
+		{fid:40,ftext:'Que el soporte haya sido afectado por pudricion parda es VERDAD'},
+		{fid:41,ftext:'Que el soporte haya sido afectado por pudricion blanda es VERDAD'},
+		{fid:42,ftext:'Que el soporte haya sido afectado por pudricion blanca es VERDAD'},
 		{fid:43,ftext:'Que el soporte haya sido afectado por insectos es VERDAD'},
 		{fid:44,ftext:'Que el barniz se haya oxidado es VERDAD'},
 		{fid:45,ftext:'Que se haya depositado polvo encima del barniz es VERDAD'},
@@ -198,20 +396,20 @@ var knowledge = {
 		{fid:50,ftext:'Que no se hayan mezclado los colores bien con el agua al usar un colorante es FALSO'},
 		{fid:51,ftext:'Que haya poco aglutinante en la mezcla es FALSO'},
 		{fid:52,ftext:'Que haya un exceso de aglutinante es FALSO'},
-		{fid:53,ftext:'Que la pintura esté empastada es FALSO'},
-		{fid:54,ftext:'Que falte aglutinante en la capa de preparación es FALSO'},
-		{fid:55,ftext:'Que sobre aglutinante en la capa de preparación es FALSO'},
-		{fid:56,ftext:'Que se hayan usado los nudos y la médula del árbol como soporte es FALSO'},
-		{fid:57,ftext:'Que se haya oxidado de elementos metálicos del soporte es FALSO'},
+		{fid:53,ftext:'Que la pintura este empastada es FALSO'},
+		{fid:54,ftext:'Que falte aglutinante en la capa de preparacion es FALSO'},
+		{fid:55,ftext:'Que sobre aglutinante en la capa de preparacion es FALSO'},
+		{fid:56,ftext:'Que se hayan usado los nudos y la medula del arbol como soporte es FALSO'},
+		{fid:57,ftext:'Que se haya oxidado de elementos metalicos del soporte es FALSO'},
 		{fid:58,ftext:'Que se hayan usado refuerzos para impedir el movimiento es FALSO'},
 		{fid:59,ftext:'Que hongos hayan atacado la pintura es FALSO'},
-		{fid:60,ftext:'Que algún mamífero haya defecado en la pintura es FALSO'},
-		{fid:61,ftext:'Que algún ave haya defecado en la pintura es FALSO'},
+		{fid:60,ftext:'Que algun mamifero haya defecado en la pintura es FALSO'},
+		{fid:61,ftext:'Que algun ave haya defecado en la pintura es FALSO'},
 		{fid:62,ftext:'Que los hongos hayan atacado el soporte es FALSO'},
-		{fid:63,ftext:'Que los hongos xilófagos hayan atacado el soporte es FALSO'},
-		{fid:64,ftext:'Que el soporte haya sido afectado por pudrición parda es FALSO'},
-		{fid:65,ftext:'Que el soporte haya sido afectado por pudrición blanda es FALSO'},
-		{fid:66,ftext:'Que el soporte haya sido afectado por pudrición blanca es FALSO'},
+		{fid:63,ftext:'Que los hongos xilofagos hayan atacado el soporte es FALSO'},
+		{fid:64,ftext:'Que el soporte haya sido afectado por pudricion parda es FALSO'},
+		{fid:65,ftext:'Que el soporte haya sido afectado por pudricion blanda es FALSO'},
+		{fid:66,ftext:'Que el soporte haya sido afectado por pudricion blanca es FALSO'},
 		{fid:67,ftext:'Que el soporte haya sido afectado por insectos es FALSO'},
 		{fid:68,ftext:'Que el barniz se haya oxidado es FALSO'},
 		{fid:69,ftext:'Que se haya depositado polvo encima del barniz es FALSO'},
@@ -221,20 +419,14 @@ var knowledge = {
 	],
 	
 	//////////////////////////////////////////////////////////////////////////////
-	// Reglas de deducción
-	//----------------------------------------------------------------------------
-	// La funcion boolean q(Numero) devuelve el resultado de una pregunta [Condicion].
-	// La funcion boolean f(Numero) prueba si un hecho ha sido establecido [Condicion].
-	// La funcion void final(Numero) establece un hecho como verdadero y conclusivo.
-	// La funcion void set(Numero) establece un hecho como verdadero.
-	// La función ask(Numero) establece la siguiente pregunta.
+	// Reglas de deduccion
 	//////////////////////////////////////////////////////////////////////////////
 	rules:[
 		////////////////////////////////////////////////// BLOQUE MENU //////////////////////////////////////////////
-		{rid:0,cond: 'q(0) == "Elaborar hipótesis"',
+		{rid:0,cond: 'q(0) == "Elaborar hipotesis"',
 		iftrue:'ask(1)',
 		iffalse:''},
-		{rid:1,cond: 'q(0) == "Comprobar hipótesis"',
+		{rid:1,cond: 'q(0) == "Comprobar hipotesis"',
 		iftrue:'ask(2)',
 		iffalse:''},
 		////////////////////////////////////////////////// BLOQUE FALLOS ////////////////////////////////////////////
@@ -244,10 +436,10 @@ var knowledge = {
 		{rid:3,cond: 'q(1) == "La pintura destiñe"',
 		iftrue:'final(2);set(3);',
 		iffalse:''},
-		{rid:4,cond: 'q(1) == "La pintura está craquelada"',
+		{rid:4,cond: 'q(1) == "La pintura esta craquelada"',
 		iftrue:'final(4);set(5);set(6);set(7);set(9);',
 		iffalse:''},
-		{rid:5,cond: 'q(1) == "La pintura está caída"',
+		{rid:5,cond: 'q(1) == "La pintura esta caida"',
 		iftrue:'final(2);set(3);set(4);set(5);set(6);set(7);set(8);set(24);',
 		iffalse:''},
 		{rid:6,cond: 'q(1) == "La pintura se disgrega"',
@@ -256,7 +448,7 @@ var knowledge = {
 		{rid:7,cond: 'q(1) == "Hay elementos indeseables en la pintura"',
 		iftrue:'final(9);set(11);set(23);',
 		iffalse:''},
-		{rid:8,cond: 'q(1) == "La pintura está curvada o alabeada"',
+		{rid:8,cond: 'q(1) == "La pintura esta curvada o alabeada"',
 		iftrue:'final(10);',
 		iffalse:''},
 		{rid:9,cond: 'q(1) == "El color del soporte ha cambiado"',
@@ -270,7 +462,7 @@ var knowledge = {
 		{rid:11,cond: 'q(2) == "Se ha barnizado el temple"',
 		iftrue:'ask(3);',
 		iffalse:''},
-		{rid:12,cond: 'q(3) == "Tono translúcido" | q(3) == "Tono amarillento"',
+		{rid:12,cond: 'q(3) == "Tono translucido" | q(3) == "Tono amarillento"',
 		iftrue:'final(25);',
 		iffalse:'final(49);'},
 		////////////////////////////////////////////////// HIPOTESIS 2 //////////////////////////////////////////////
@@ -295,50 +487,174 @@ var knowledge = {
 		iftrue:'final(28);',
 		iffalse:'final(52);'},
 		////////////////////////////////////////////////// HIPOTESIS 5 //////////////////////////////////////////////
-		{rid:20,cond: 'q(2) == "La pintura esté empastada"',
+		{rid:20,cond: 'q(2) == "La pintura este empastada"',
 		iftrue:'ask(7);',
 		iffalse:''},
 		{rid:21,cond: 'q(7) == "Zona con grueso de pintura craquelada" | q(7) == "Zona con grueso de pintura craquelada y con laguna faltante"',
 		iftrue:'final(29);',
 		iffalse:'final(53);'},
 		////////////////////////////////////////////////// HIPOTESIS 6 //////////////////////////////////////////////
-		{rid:22,cond: 'q(2) == "Falta aglutinante en la capa de preparación"',
+		{rid:22,cond: 'q(2) == "Falta aglutinante en la capa de preparacion"',
 		iftrue:'ask(8);',
 		iffalse:''},
-		{rid:23,cond: 'q(8) == "Se lija fácilmente"',
+		{rid:23,cond: 'q(8) == "Se lija facilmente"',
 		iftrue:'final(30);',
-		iffalse:'final(54);'},
+		iffalse:'final(54);final(55);'},
 		////////////////////////////////////////////////// HIPOTESIS 7 //////////////////////////////////////////////
-		{rid:24,cond: 'q(2) == "Sobra aglutinante en la capa de preparación"',
+		{rid:24,cond: 'q(2) == "Sobra aglutinante en la capa de preparacion"',
 		iftrue:'ask(9);',
 		iffalse:''},
 		{rid:25,cond: 'q(9) == "Se lija con dificultad"',
 		iftrue:'final(31);',
-		iffalse:'final(55);'},
+		iffalse:'final(55);final(30);'},
 		////////////////////////////////////////////////// HIPOTESIS 8 //////////////////////////////////////////////
-		{rid:26,cond: 'q(2) == "Se han usado los nudos y la médula del árbol como soporte"',
+		{rid:26,cond: 'q(2) == "Se han usado los nudos y la medula del arbol como soporte"',
 		iftrue:'ask(10);',
 		iffalse:''},
-		{rid:27,cond: 'q(10) == "Se lija con dificultad"',
+		{rid:27,cond: 'q(10) == "Si"',
 		iftrue:'final(32);',
 		iffalse:'final(56);'},
-		/*
-'Se han oxidado de elementos metálicos del soporte'
-'Se han usado refuerzos para impedir el movimiento'
-'Hongos atacado la pintura'
-'Algún mamífero hay defecado en la pintura'
-'Algún ave hay defecado en la pintura'
-'Los hongos han atacado el soporte'
-'Los hongos xilófagos han atacado el soporte'
-'El soporte ha sido afectado por pudrición parda'
-'El soporte ha sido afectado por pudrición blanda'
-'El soporte ha sido afectado por pudrición blanca'
-'El soporte ha sido afectado por insectos'
-'El barniz se ha oxidado'
-'Se ha depositado polvo encima del barniz'
-'El humo de una vela ha ennegrecido el barniz'
-'La pintura se ha sometido a calor continuado'
-'Se ha quemado el cuadro'
-		*/
+		////////////////////////////////////////////////// HIPOTESIS 9 //////////////////////////////////////////////
+		{rid:28,cond: 'q(2) == "Se han oxidado de elementos metalicos del soporte"',
+		iftrue:'ask(11);',
+		iffalse:''},
+		{rid:29,cond: 'q(11) == "Si"',
+		iftrue:'final(33);',
+		iffalse:'final(57);'},
+		////////////////////////////////////////////////// HIPOTESIS 10 //////////////////////////////////////////////
+		{rid:30,cond: 'q(2) == "Se han usado refuerzos para impedir el movimiento"',
+		iftrue:'ask(12);',
+		iffalse:''},
+		{rid:31,cond: 'q(12) == "Si"',
+		iftrue:'final(34);',
+		iffalse:'final(58);'},
+		////////////////////////////////////////////////// HIPOTESIS 11 //////////////////////////////////////////////
+		{rid:32,cond: 'q(2) == "Los hongos han atacado la pintura"',
+		iftrue:'ask(13);',
+		iffalse:''},
+		{rid:33,cond: 'q(13) == "Si"',
+		iftrue:'ask(14);',
+		iffalse:'final(59);'},
+		{rid:34,cond: 'q(14) == "Si"',
+		iftrue:'final(35);',
+		iffalse:'final(59);'},
+		////////////////////////////////////////////////// HIPOTESIS 12 //////////////////////////////////////////////
+		{rid:35,cond: 'q(2) == "Algun mamifero ha defecado en la pintura"',
+		iftrue:'ask(15);',
+		iffalse:''},
+		{rid:36,cond: 'q(15) == "Bolitas oscuras"',
+		iftrue:'final(36);',
+		iffalse:'final(60);final(37);'},
+		////////////////////////////////////////////////// HIPOTESIS 13 //////////////////////////////////////////////
+		{rid:37,cond: 'q(2) == "Algun ave ha defecado en la pintura"',
+		iftrue:'ask(16);',
+		iffalse:''},
+		{rid:38,cond: 'q(16) == "Manchas secas"',
+		iftrue:'final(37);',
+		iffalse:'final(61);final(36);'},
+		////////////////////////////////////////////////// HIPOTESIS 14 //////////////////////////////////////////////
+		{rid:39,cond: 'q(2) == "Los hongos han atacado el soporte"',
+		iftrue:'ask(17);',
+		iffalse:''},
+		{rid:40,cond: 'q(17) == "Si"',
+		iftrue:'final(38);',
+		iffalse:'final(62);'},
+		////////////////////////////////////////////////// HIPOTESIS 15 //////////////////////////////////////////////
+		{rid:41,cond: 'q(2) == "Los hongos xilofagos han atacado el soporte"',
+		iftrue:'ask(18);',
+		iffalse:''},
+		{rid:42,cond: 'q(18) == "Si"',
+		iftrue:'ask(19);',
+		iffalse:'final(63);'},
+		{rid:43,cond: 'q(19) == "Si"',
+		iftrue:'final(39);',
+		iffalse:'final(63);final(38);'},
+		////////////////////////////////////////////////// HIPOTESIS 16 //////////////////////////////////////////////
+		{rid:44,cond: 'q(2) == "El soporte ha sido afectado por pudricion parda"',
+		iftrue:'ask(20);',
+		iffalse:''},
+		{rid:45,cond: 'q(20) == "Marron oscuro"',
+		iftrue:'final(40);final(66);',
+		iffalse:''},
+		{rid:46,cond: 'q(20) == "Blanquecino"',
+		iftrue:'final(64);final(42);',
+		iffalse:''},
+		{rid:47,cond: 'q(20) == "Otro color"',
+		iftrue:'final(64);final(66);',
+		iffalse:''},
+		////////////////////////////////////////////////// HIPOTESIS 17 //////////////////////////////////////////////
+		{rid:48,cond: 'q(2) == "El soporte ha sido afectado por pudricion blanda"',
+		iftrue:'ask(21);',
+		iffalse:''},
+		{rid:49,cond: 'q(21) == "Si"',
+		iftrue:'final(41);',
+		iffalse:'final(65);'},
+		////////////////////////////////////////////////// HIPOTESIS 18 //////////////////////////////////////////////
+		{rid:50,cond: 'q(2) == "El soporte ha sido afectado por pudricion blanca"',
+		iftrue:'ask(22);',
+		iffalse:''},
+		{rid:51,cond: 'q(22) == "Marron oscuro"',
+		iftrue:'final(40);final(66);',
+		iffalse:''},
+		{rid:52,cond: 'q(22) == "Blanquecino"',
+		iftrue:'final(64);final(42);',
+		iffalse:''},
+		{rid:53,cond: 'q(22) == "Otro color"',
+		iftrue:'final(64);final(66);',
+		iffalse:''},
+		////////////////////////////////////////////////// HIPOTESIS 19 //////////////////////////////////////////////
+		{rid:54,cond: 'q(2) == "El soporte ha sido afectado por insectos"',
+		iftrue:'ask(23);',
+		iffalse:''},
+		{rid:55,cond: 'q(23) == "Si"',
+		iftrue:'final(43);',
+		iffalse:'final(67);'},
+		////////////////////////////////////////////////// HIPOTESIS 20 //////////////////////////////////////////////
+		{rid:56,cond: 'q(2) == "El barniz se ha oxidado"',
+		iftrue:'ask(24);',
+		iffalse:''},
+		{rid:57,cond: 'q(24) == "Tono opaco"',
+		iftrue:'ask(25);',
+		iffalse:'final(68);final(69);'},
+		{rid:58,cond: 'q(25) == "No"',
+		iftrue:'final(44);',
+		iffalse:'final(68);final(45);'},
+		////////////////////////////////////////////////// HIPOTESIS 21 //////////////////////////////////////////////
+		{rid:59,cond: 'q(2) == "Se ha depositado polvo encima del barniz"',
+		iftrue:'ask(26);',
+		iffalse:''},
+		{rid:60,cond: 'q(26) == "Tono opaco"',
+		iftrue:'ask(27);',
+		iffalse:'final(68);final(69);'},
+		{rid:61,cond: 'q(27) == "Si"',
+		iftrue:'final(45);',
+		iffalse:'final(69);final(44);'},
+		////////////////////////////////////////////////// HIPOTESIS 22 //////////////////////////////////////////////
+		{rid:61,cond: 'q(2) == "El humo de una vela ha ennegrecido el barniz"',
+		iftrue:'ask(28);',
+		iffalse:''},
+		{rid:62,cond: 'q(28) == "Tono negro"',
+		iftrue:'ask(29);',
+		iffalse:'final(70);'},
+		{rid:63,cond: 'q(29) == "No"',
+		iftrue:'final(46);final(72);',
+		iffalse:'final(70);final(48);'},
+		////////////////////////////////////////////////// HIPOTESIS 23 //////////////////////////////////////////////
+		{rid:64,cond: 'q(2) == "La pintura se ha sometido a calor continuado"',
+		iftrue:'ask(30);',
+		iffalse:''},
+		{rid:65,cond: 'q(30) == "Si"',
+		iftrue:'final(47);',
+		iffalse:'final(71);'},
+		////////////////////////////////////////////////// HIPOTESIS 24 //////////////////////////////////////////////
+		{rid:66,cond: 'q(2) == "Se ha quemado el cuadro"',
+		iftrue:'ask(31);',
+		iffalse:''},
+		{rid:67,cond: 'q(31) == "Tono negro"',
+		iftrue:'ask(32);',
+		iffalse:'final(70);final(72);'},
+		{rid:68,cond: 'q(32) == "Si"',
+		iftrue:'final(48);final(70);',
+		iffalse:'final(72);final(46);'},
 	],
 };
