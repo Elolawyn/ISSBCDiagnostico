@@ -1,11 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Sistema de Evaluacion de Reglas
-//------------------------------------------------------------------------------
-// Maquina de inferencia simple con encadenamiento hacia adelante.
-// Version 0.1 Beta
-// Escrito por J.M. Ayala Wilson.
-//------------------------------------------------------------------------------
-// Base del conocimiento para 
+// Version 0.5 Beta
+// Escrito por Raul Arroyo Lubian, Alfonso Lacalle Garcia y Pedro Daniel Lopez Gonzalez
 ////////////////////////////////////////////////////////////////////////////////
 
 var knowledge = {
