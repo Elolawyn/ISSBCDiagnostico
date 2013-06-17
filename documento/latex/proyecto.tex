@@ -1082,40 +1082,20 @@ V17 & Si & H04, H08, H09, H10, H11, H14, H15, H17, H19, H21, H23, H24\\
 			\end{center}
 		\newpage
 		\subsection{Modelo de comunicación}
-			\subsubsection{Formulario CM-1}
-			\begin{center}
-				\begin{tabular}{| l | l |}
-					\hline
-					\textbf{Nombre de transacción} & \\
-					\hline
-					\textbf{Objetos de información} & \\
-					\hline
-					\textbf{Agentes involucrados} & \\
-					\hline
-					\textbf{Plan de comunicaciones} & \\
-					\hline
-					\textbf{Restricciones} & \\
-					\hline
-					\textbf{Especificaciones del intercambio de información} & \\
-					\hline
-				\end{tabular}
-			\end{center}
-			\subsubsection{Formulario CM-2}
-			\begin{center}
-				\begin{tabular}{| l | l |}
-					\hline
-					\textbf{Transacción} & \\
-					\hline
-					\textbf{Agentes involucrados} & \\
-					\hline
-					\textbf{Ítems de información} & \\
-					\hline
-					\textbf{Especificaciones de los mensajes} & \\
-					\hline
-					\textbf{Control sobre mensajes} & \\
-					\hline
-				\end{tabular}
-			\end{center}
+			Puesto que para la aplicación desarrollamos una única tarea intensiva en
+			conocimiento, esto es el Diagnóstico sobre el estado de las obras de arte,
+			hemos considerado que no es necesario llevar a cabo el modelo de
+			comunicación.\\\\
+			Esta tarea si conlleva un intercambio de información en su interior pero es
+			muy sencillo:
+			\begin{enumerate}
+				\item La aplicación hace preguntas al usuario. Las preguntas se componene de
+				una cadena y se muestran por pantalla.
+				\item El usuario responde a la aplicación. La respuesta es una selección en
+				un menú desplegable.
+				\item La aplicación devuelve sus conclusiones. Estas conclusiones forman una
+				lista de cadenas que se muestran por pantalla.
+			\end{enumerate}
 	\newpage
 	\section{Modelado de diseño}
 		\subsection{Modelo de diseño}
