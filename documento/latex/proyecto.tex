@@ -1082,40 +1082,20 @@ V17 & Si & H04, H08, H09, H10, H11, H14, H15, H17, H19, H21, H23, H24\\
 			\end{center}
 		\newpage
 		\subsection{Modelo de comunicación}
-			\subsubsection{Formulario CM-1}
-			\begin{center}
-				\begin{tabular}{| l | l |}
-					\hline
-					\textbf{Nombre de transacción} & \\
-					\hline
-					\textbf{Objetos de información} & \\
-					\hline
-					\textbf{Agentes involucrados} & \\
-					\hline
-					\textbf{Plan de comunicaciones} & \\
-					\hline
-					\textbf{Restricciones} & \\
-					\hline
-					\textbf{Especificaciones del intercambio de información} & \\
-					\hline
-				\end{tabular}
-			\end{center}
-			\subsubsection{Formulario CM-2}
-			\begin{center}
-				\begin{tabular}{| l | l |}
-					\hline
-					\textbf{Transacción} & \\
-					\hline
-					\textbf{Agentes involucrados} & \\
-					\hline
-					\textbf{Ítems de información} & \\
-					\hline
-					\textbf{Especificaciones de los mensajes} & \\
-					\hline
-					\textbf{Control sobre mensajes} & \\
-					\hline
-				\end{tabular}
-			\end{center}
+			Puesto que para la aplicación desarrollamos una única tarea intensiva en
+			conocimiento, esto es el Diagnóstico sobre el estado de las obras de arte,
+			hemos considerado que no es necesario llevar a cabo el modelo de
+			comunicación.\\\\
+			Esta tarea si conlleva un intercambio de información en su interior pero es
+			muy sencillo:
+			\begin{enumerate}
+				\item La aplicación hace preguntas al usuario. Las preguntas se componen de
+				una cadena y se muestran por pantalla.
+				\item El usuario responde a la aplicación. La respuesta es una selección en
+				un menú desplegable.
+				\item La aplicación devuelve sus conclusiones. Estas conclusiones forman una
+				lista de cadenas que se muestran por pantalla.
+			\end{enumerate}
 	\newpage
 	\section{Modelado de diseño}
 		\subsection{Modelo de diseño}
@@ -1171,53 +1151,32 @@ V17 & Si & H04, H08, H09, H10, H11, H14, H15, H17, H19, H21, H23, H24\\
 					\hline
 				\end{tabular}
 			\end{center}
-			\subsubsection{Formulario DM-3}
-			\begin{center}
-				\begin{tabular}{| l | l |}
-					\hline
-					\textbf{Elemento de la arquitectura} & \textbf{Elementos típicos de
-					decisión} \\
-					\hline
-					\textbf{Controlador} & \\
-					\hline
-					\textbf{Tarea} & \\
-					\hline
-					\textbf{Método de la tarea} & \\
-					\hline
-					\textbf{Inferencia} &  \\
-					\hline
-					\textbf{Método de la inferencia} & \\
-					\hline
-					\textbf{Rol estático} & \\
-					\hline
-					\textbf{Rol dinámico} & \\
-					\hline
-					\textbf{Base de conocimiento} & \\
-					\hline
-					\textbf{Vistas} & \\
-					\hline
-				\end{tabular}
-			\end{center}
-			\subsubsection{Formulario DM-4}
-			\begin{center}
-				\begin{tabular}{| l | l | l |}
-					\hline
-					\textbf{Elemento} & \textbf{Decisión de diseño} & \textbf{Comentarios} \\
-					\hline
-					\textbf{Controlador} &  & \\
-					\hline
-					\textbf{Método de la tarea} &  & \\
-					\hline
-					\textbf{Roles dinámicos} &  & \\
-					\hline
-					\textbf{Inferencias} &  & \\
-					\hline
-					\textbf{Métodos de las inferencias} &  & \\
-					\hline
-					\textbf{Bases de conocimiento} &  & \\
-					\hline
-					\textbf{Vistas de los objetos} &  & \\
-					\hline
-				\end{tabular}
-			\end{center}
+			\subsubsection{Formularios DM-3 y DM-4}
+			Hemos considerado que no es necesario comentar acerca del motor de
+			inferencia, métodos, variables, decisiones de diseño, etc... porque hemos
+			reutilizado para nuestra aplicación el motor de inferencia REE en Javascript
+			de Jose Manuel Ayala Wilson. Hemos considerado que sería más instructivo
+			descargar su aplicación de prueba y acceder a su documentación. Este motor de
+			inferencia puede descargarse desde:
+			\begin{itemize}
+			  \item Su blog en
+			  \href{http://jmaw.blogspot.com.es/}{http://jmaw.blogspot.com.es/}
+			  \item Página del proyecto en Google Code 
+			  \href{https://code.google.com/p/js-ree/}{https://code.google.com/p/js-ree/}
+			\end{itemize}
+		\section{Conclusión}
+		Y con esto acaba la especificación del SDJS - RCPTTE. Si hay algún detalle
+		que se nos haya olvidado indicar consulte la documentación de la aplicación o
+		asista a la presentación de la misma. Puede acceder a la aplicación en la
+		siguiente dirección:
+		\begin{itemize}
+			  \item
+			  \href{http://www.uco.es/~i02arlur/app/}{http://www.uco.es/~i02arlur/app/}
+		\end{itemize}
+		Puede descargar este documento, la aplicación y la presentación si accede al
+		proyecto en GitHub:
+		\begin{itemize}
+			  \item
+			  \href{https://github.com/Elolawyn/ISSBCDiagnostico}{https://github.com/Elolawyn/ISSBCDiagnostico}
+		\end{itemize}
 \end{document}
