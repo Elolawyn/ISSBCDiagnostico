@@ -811,8 +811,245 @@
 	\newpage
 	\section{Modelado conceptual}
 		\subsection{Modelo de conocimiento}
-			\subsubsection{Formulario KM-1}
-			
+			\subsubsection{Tarea de diagnóstico}
+			\includegraphics[width=300px]{diagnostico.png} \\
+			\subsubsection{Definiciones}
+			\subsubsection{Fallos}
+			\begin{center}
+				\begin{tabular}{| p{2cm} | p{6cm} | p{3cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{Fallo} &
+					\cellcolor[RGB]{224,233,250}\textbf{Descripción} &
+					\cellcolor[RGB]{224,233,250}\textbf{Hipótesis relacionadas}\\
+					\hline
+					F01 & El cuadro tiene un tono anormal. & H01, H12, H13, H20, H21, H22,
+					H24\\
+					\hline
+					F02 & La pintura destiñe. & H02, H03\\
+					\hline
+					F03 & La pintura está craquelada. &
+					H04, H05, H06, H07, H09\\
+					\hline
+					F04 & La pintura está caída. &
+					H02, H03, H04, H05, H06, H07, H08, H24\\
+					\hline
+					F05 & La pintura se disgrega. & H06\\
+					\hline
+					F06 & Hay elementos indeseables en la pintura. &
+					H09, H11, H23\\
+					\hline
+					F07 & La pintura está curvada o alabeada. & H10\\
+					\hline
+					F08 & El color del soporte ha cambiado. &
+					H12, H13, H14, H15, H16, H18\\
+					\hline
+					F09 & El estado del soporte ha cambiado. & H15, H17, H19\\
+					\hline
+				\end{tabular}
+			\end{center}
+			\newpage
+			\subsubsection{Hipótesis}
+			\begin{center}
+				\begin{tabular}{| p{2cm} | p{6cm} | p{3cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{Hipótesis} &
+					\cellcolor[RGB]{224,233,250}\textbf{Descripción} &
+					\cellcolor[RGB]{224,233,250}\textbf{Observables relacionados}\\
+					\hline
+\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250}Causa intrínseca - Capa de barniz &
+\cellcolor[RGB]{224,233,250}\\
+ \hline
+H01 & Se ha barnizado el temple. & O01\\
+\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250}Causa intrínseca - Capa pictórica &
+\cellcolor[RGB]{224,233,250}\\
+ \hline
+H02 & No se han mezclado los colores bien con el agua al usar un colorante. &
+O02\\
+\hline
+H03 & Hay poco aglutinante en la mezcla. & O02\\
+ \hline
+H04 & Hay un exceso de aglutinante. & O03\\
+ \hline
+H05 & La pintura está empastada. & O04\\
+ \hline
+\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250}Causa intrínseca - Capa de preparación &
+\cellcolor[RGB]{224,233,250}\\
+ \hline
+H06 & Falta aglutinante en la capa de preparación. & O05\\
+ \hline
+H07 & Sobra aglutinante en la capa de preparación. & O05\\
+\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250}Causa intrínseca - Capa de soporte &
+\cellcolor[RGB]{224,233,250}\\
+ \hline
+H08 & Se han usado los nudos y la médula del árbol como soporte que acaban
+pudriéndose. & O06\\
+ \hline
+H09 & Oxidación de elementos metálicos del soporte como grapas... & O07\\
+ \hline
+H10 & Se han usado refuerzos para impedir el movimiento como colas de milano,
+espigas... & O08\\
+ \hline
+\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250}Causa extrínsecas bióticas - Capa de barniz -
+No hay & \cellcolor[RGB]{224,233,250}\\
+ \hline
+\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250}Causa extrínsecas bióticas - Capa pictórica
+&\cellcolor[RGB]{224,233,250}
+\\
+ \hline
+H11 & Los hongos han atacado la pintura. & O09 y O10\\
+ \hline
+H12 & Algún mamífero ha defecado en la pintura, analizar el excremento en un
+laboratorio para identificarlo. & O11\\
+ \hline
+H13 & Algún ave ha defecado en la pintura, analizar el excremento en un laboratorio
+para identificarlo. & O11\\
+\hline
+\end{tabular}
+			\end{center}
+			\newpage
+			\begin{center}
+				\begin{tabular}{| p{2cm} | p{6cm} | p{3cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{Hipótesis} &
+					\cellcolor[RGB]{224,233,250}\textbf{Descripción} &
+					\cellcolor[RGB]{224,233,250}\textbf{Observables relacionados}\\
+ \hline
+ \cellcolor[RGB]{224,233,250}& \cellcolor[RGB]{224,233,250}Causa extrínsecas bióticas - Capa de
+ preparación - No hay & \cellcolor[RGB]{224,233,250}\\
+ \hline
+ \cellcolor[RGB]{224,233,250}& \cellcolor[RGB]{224,233,250}Causa extrínsecas bióticas - Capa de soporte
+ &\cellcolor[RGB]{224,233,250}
+ \\
+ \hline
+H14 & Los hongos han atacado el soporte. & O12\\
+ \hline
+H15 & Los hongos xilófagos han atacado el soporte. & O12 y O13\\
+ \hline
+H16 & El soporte ha sido afectado por pudrición parda. & O14\\
+ \hline
+H17 & El soporte ha sido afectado por pudrición blanda. & O15\\
+ \hline
+H18 & El soporte ha sido afectado por pudrición blanca. & O14\\
+ \hline
+H19 & El soporte ha sido atacado por insectos. & O16\\
+ \hline
+ \cellcolor[RGB]{224,233,250}& \cellcolor[RGB]{224,233,250}Causa extrínsecas ambientales - Capa de barniz
+ & \cellcolor[RGB]{224,233,250}\\
+ \hline
+H20 & El barniz se ha oxidado. & O01\\
+ \hline
+H21 & Se ha depositado polvo encima del barniz. & O01 y O17\\
+ \hline
+H22 & El humo de la vela ha ennegrecido el barniz. & O01\\
+ \hline
+\cellcolor[RGB]{224,233,250} & \cellcolor[RGB]{224,233,250}Causa extrínsecas ambientales - Capa pictórica
+& \cellcolor[RGB]{224,233,250}\\
+ \hline
+H23 & La pintura se ha sometido a calor continuado. & O18\\
+ \hline
+H24 & Se ha quemado el cuadro. & O01 y O19\\
+ \hline
+				\end{tabular}
+			\end{center}
+			\newpage
+			\subsubsection{Observables o Preguntas}
+			\begin{center}
+				\begin{tabular}{| p{2cm} | p{6cm} | p{3cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{Observable} &
+					\cellcolor[RGB]{224,233,250}\textbf{Descripción} &
+					\cellcolor[RGB]{224,233,250}\textbf{Valores relacionados}\\
+					\hline
+O01 & Comprobar tono del cuadro. & V01, V02 y V03 y V04\\
+					\hline
+O02 & Pasa la mano por el cuadro. & V05, V06, V07 y V08\\
+					\hline
+O03 & ¿Observas surcos grasos en la zona craquelada? & V17\\
+					\hline
+O04 & Comprobar el cuadro de perfil. & V09 y V10\\
+					\hline
+O05 & Lijar un resto de la capa de preparación a la que le falte pintura. &
+V11 y V12\\
+					\hline
+O06 & ¿Ves un hueco grande y ovalado? & V17\\
+					\hline
+O07 & ¿Hay algún objeto metálico oxidado debajo de la zona abultada o
+craquelada? & V17\\
+					\hline
+O08 & ¿El cuadro presenta refuerzos, colas de milano o espigas en la parte
+trasera? & V17\\
+					\hline
+O09 & ¿Hay manchas de color gris o azulado en la pintura? & V17\\
+					\hline
+O10 & ¿Hay pelusilla en la pintura? (Depende de que O09 sea V17) & V17\\
+					\hline
+O11 & ¿Presenta manchas secas o bolitas pequeñas oscuras? & V13 y V14\\
+					\hline
+O12 & ¿Hay manchas de color gris o azulado en el soporte? & V17\\
+					\hline
+O13 & ¿Pesa menos el cuadro? & V17\\
+					\hline
+O14 & ¿De qué color es el soporte? & V15 y V16\\
+					\hline
+O15 & ¿El soporte está gelatinoso? & V17\\
+					\hline
+O16 & ¿Tiene el soporte agujeros limpios de forma circular o elíptica? & V17\\
+					\hline
+O17 & ¿Manchas de polvo una bayeta al pasarla por el cuadro? (Depende de que O01
+sea V03) & V17\\
+					\hline
+O18 & ¿La pintura tiene ampollas o burbujas? & V17\\
+					\hline
+O19 & ¿El cuadro tiene zonas donde se ha caído la pintura o está carbonizada?
+(Depende de que O01 sea V04) & V17\\
+					\hline
+				\end{tabular}
+			\end{center}
+			\newpage
+			\subsubsection{Valores, Hallazgos o Respuestas}
+			\begin{center}
+				\begin{tabular}{| p{2cm} | p{6cm} | p{3cm} |}
+					\hline
+					\cellcolor[RGB]{224,233,250}\textbf{Valor} &
+					\cellcolor[RGB]{224,233,250}\textbf{Descripción} &
+					\cellcolor[RGB]{224,233,250}\textbf{Hipótesis que cumple}\\
+					\hline
+V01 & Tono amarillento. & H01\\
+					\hline
+V02 & Tono translúcido. & H01\\
+					\hline
+V03 & Tono opaco. & H20 y H21\\
+					\hline
+V04 & Tono negro. & H22 y H24\\
+					\hline
+V05 & Mano manchada de rojo cadmio medio. & H02\\
+					\hline
+V06 & Mano manchada de amarillo cadmio. & H02\\
+					\hline
+V07 & Mano manchada de azul esmalte. & H02\\
+					\hline
+V08 & Mano manchada con varios colores. & H03\\
+					\hline
+V09 & Zona con grueso de pintura craquelada. & H05\\
+					\hline
+V10 & Zona con grueso de pintura craquelada y con laguna faltante. & H05\\
+					\hline
+V11 & Se lija fácilmente. & H06\\
+					\hline
+V12 & Se lija con dificultad. & H07\\
+					\hline
+V13 & Bolitas oscuras. & H12\\
+					\hline
+V14 & Manchas secas. & H13\\
+					\hline
+V15 & Marrón oscuro. & H16\\
+					\hline
+V16 & Blanquecino. & H18\\
+					\hline
+V17 & Si & H04, H08, H09, H10, H11, H14, H15, H17, H19, H21, H23, H24\\
+					\hline
+				\end{tabular}
+			\end{center}
 		\newpage
 		\subsection{Modelo de comunicación}
 			\subsubsection{Formulario CM-1}
