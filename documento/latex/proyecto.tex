@@ -47,6 +47,9 @@
             \includegraphics[width=250px]{logo_cordosoft.png} \\
             \includegraphics[width=200px]{conservart_logo.png} \\
 			\textbf{\LARGE Documento de especificación} \\
+			\\
+			\textbf{}
+			\\
 			\textbf{\Large SDJS - RCPTTE} \\
 			\\
 			\textbf{}
@@ -82,49 +85,97 @@
 	% Contenido
 	%***************************************************************************************************
 	\section{Introducción}
+	\newpage
 	\section{Modelado de contexto}
 		\subsection{Modelo de organización}
 			\subsubsection{Formulario OM-1}
 			\begin{center}
-				\begin{tabular}{| l | l |}
+				\begin{tabular}{| p{2.9cm} | p{8.5cm} |}
 					\hline
-					\textbf{Problemas y oportunidades} & \\
+					\textbf{Problemas y oportunidades} &
+					Muchas veces era complicado ponerse en contacto con los expertos. El equipo
+					de restauración tenían mucho trabajo atrasado y se acumulaban tareas que hacer.\\
+					& La empresa de arte no podía aceptar nuevos pedidos.\\
+					& Las posibilidades de expansión de esta empresa eran muy complicadas,
+					incluso teniendo personal más que cualificado.\\
+					& La empresa de arte tiene ya clientes que están deseando trabajar con
+					ellas, el trabajo acumulado le impide a esta empresa acceder a estos nuevos
+					contratos.\\
+					& Discusiones personales en los expertos que hacen que muchas veces sea
+					imposible empezar un trabajo de restauración.\\
+					& La formación de nuevos técnicos es costosa se desea conservar el
+					conocimiento en la detección de fallos de las obras de arte.\\
 					\hline
-					\textbf{Contexto organizacional} & \\
+					\textbf{Contexto organizacional} &
+					Empresa dedicada al estudio, conservación y restauración de obras de arte.\\
 					\hline
-					\textbf{Soluciones} & \\
+					\textbf{Soluciones} & \textbf{Solución 1:} seguir funcionando como hasta ahora.\\
+					& \textbf{Solución 2:} formar en el diagnóstico a los restauradores de la empresa.\\
+					& \textbf{Solución 3:} desarrollo de un SBC para guiar la entrevista inicial con el cliente de manera que se obtenga la mayor y mejor información posible sobre el fallo del cuadro. Este SBC podría ser utilizado bien por el cliente vía Web o bien por el/los restaurador/es, en función del medio que estos empleen para solicitar la restauración.\\
+					& \textbf{Solución 4:} desarrollo de un SBC que servirá como guía al servicio de asistencia técnica en los procesos de restauración y que será usado por los restauradores.\\
 					\hline
 				\end{tabular}
 			\end{center}
+			\newpage
 			\subsubsection{Formulario OM-2}
-			Incluye un diagrama de la empresa
 			\begin{center}
-				\begin{tabular}{| l | l |}
+				\begin{tabular}{| p{2.5cm} | p{9cm} |}
 					\hline
-					\textbf{Estructura} & \\
+					\textbf{Estructura} & El organigrama corporativo en el que se detallan los
+					departamentos de interes. El Área de Administración se encarga de las tareas administrativas de la empresa. El Área de formación en la que se forma a los distintos empleados de la empresa mediante cursos y talleres. El Área de Conservación y Restauración que es la encargada en restaurar y conservar distintas piezas de arte. El Área de investigación se dedica a la investigación de nuevos procesos para la conservación y estudio de obras de arte. El Área de Bellas artes se dedica al estudio histórico de las distintas obras de arte gestionadas por la empresa.\\
 					\hline
-					\textbf{Procesos} & \\
+					\textbf{Procesos} & Proceso de asistencia técnica, atención al cliente,
+					restauración de obras de arte, análisis en laboratorio de fragmentos de obras de arte, formación de empleados.\\
 					\hline
-					\textbf{Personal} & \\
+					\textbf{Personal} & Administrativos, coordinador restaurador, restaurador
+					(pintura y soporte), coordinador jurídico, coordinador económico, coordinador de bellas artes, historiador, biólogo y químico.\\
 					\hline
-					\textbf{Recursos} & \\
+					\textbf{Recursos} & Los recursos de la empresa son prácticamente ilimitados
+					para el trabajo de restauración y conservación de arte. Si no disponen de algo, no escatimarán en gastos para obtenerlo.\\
 					\hline
-					\textbf{Conocimiento} & \\
+					\textbf{Conocimiento} & La empresa dispone de una gran cantidad de
+					conocimiento a través de sus expertos sobre la conservación y restauración de piezas de arte.\\
 					\hline
-					\textbf{Cultura y potencial} & \\
+					\textbf{Cultura y potencial} & La empresa trabaja a nivel nacional debido a
+					sus limitaciones actuales. Con la implementación del nuevo Sistema Basado en Conocimiento podrá llegar a trabajar a nivel internacional, pudiendo recibir pedidos de cualquier cliente, tanto público como privado del propio sector.\\
 					\hline
-				\end{tabular}
+				\end{tabular}\\
+				\newpage
+				\includegraphics[width=350px]{organigrama.png} \\
 			\end{center}
 			\newpage
 			\begin{landscape}
 			\subsubsection{Formulario OM-3}
 			\begin{center}
-				\begin{tabular}{| l | l | p{2.8cm} | p{2cm} | p{5cm} | p{3cm} | p{2.5cm} |}
+				\begin{tabular}{| l | p{4cm} | p{2.8cm} | p{2cm} | p{2cm} | p{3cm} |
+				p{2.2cm} |}
 					\hline
 					\textbf{Nº} & \textbf{Tarea} & \textbf{Realizada por} & \textbf{¿Donde?} & \textbf{Recursos de conocimiento} &
 					\textbf{¿Intensivo en conocimiento?} & \textbf{Importancia}\\
 					\hline
-					 & & & & & &\\
+					1 & Negociación del cuadro (valoración) & Director gerente & Despacho del
+					director & Si & Si & Si\\
+					\hline
+					2 & Gestión de clientes & Área de administración & Área de administración
+					& Si & No & Si\\
+					\hline
+					3 & Manipulación de personal & Área de administración & Área de
+					administración & No & No & Si\\
+					\hline
+					4 & Información histórica del cuadro & Área de bellas artes & Área de
+					bellas artes & Si & No & Si\\
+					\hline
+					5 & Prediagnóstico del cuadro & Área de conservación & Deslocalizado & Si
+					& Si & Si\\
+					\hline
+					6 & Diagnóstico del cuadro & Área de conservación y restauración & Taller &
+					Si & Si & Si\\
+					\hline
+					7 & Reparacion del cuadro & Área de conservación y restauración & Taller &
+					Si & Si & Si\\
+					\hline
+					8 & Elaboración de presupuesto & Área de administración & Área de
+					administración & No & No & No\\
 					\hline
 				\end{tabular}
 			\end{center}
@@ -293,9 +344,12 @@
 					\hline
 				\end{tabular}
 			\end{center}
+	\newpage
 	\section{Modelado conceptual}
 		\subsection{Modelo de conocimiento}
 			\subsubsection{Formulario KM-1}
+			
+		\newpage
 		\subsection{Modelo de comunicación}
 			\subsubsection{Formulario CM-1}
 			Hay que hacer uno por cada transacción, quizás
@@ -333,6 +387,7 @@
 					\hline
 				\end{tabular}
 			\end{center}
+	\newpage
 	\section{Modelado de diseño}
 		\subsection{Modelo de diseño}
 			\subsubsection{Formulario DM-1}
@@ -349,27 +404,36 @@
 					\hline
 				\end{tabular}
 			\end{center}
+			\newpage
 			\subsubsection{Formulario DM-2}
 			\begin{center}
-				\begin{tabular}{| l | l |}
+				\begin{tabular}{| p{4.8cm} | p{6.5cm} |}
 					\hline
-					\textbf{Producto software} &  \\
+					\textbf{Producto software} & SDJS - RCPTTE \\
 					\hline
-					\textbf{Hardware potencial} & \\
+					\textbf{Hardware potencial} & El sistema se va a instalar en un servidor
+					web. Es una aplicación sencilla donde el cálculo se realiza en el cliente por lo que el servidor se limita a servir peticiones.\\
 					\hline
-					\textbf{Hardware de desarrollo} & \\
+					\textbf{Hardware de desarrollo} & Para el desarrollo del sistema contamos
+					con equipos normales y portátiles de una potencia y costes moderados.\\
 					\hline
-					\textbf{Librería de visualización} & \\
+					\textbf{Librería de visualización} & Para la visualización de la aplicación
+					se va a emplear una aplicación web realizada con HTML5, CSS3 y Javascript.\\
 					\hline
-					\textbf{Lenguaje de implementación} &  \\
+					\textbf{Lenguaje de implementación} & El lenguaje empleado para el motor de
+					inferencia es Javascript. Hemos encontrado un motor de inferencia realizado por Jose Manuel Ayala Wilson y licenciado bajo GNU GPL V3 que podemos reutilizar.\\
 					\hline
-					\textbf{Representación del conocimiento} & \\
+					\textbf{Representación del conocimiento} & La representación del
+					conocimiento se realizará en una base del conocimiento hecha en Javascript y formada por preguntas, respuestas, hechos y reglas.\\
 					\hline
-					\textbf{Protocolos de interacción} & \\
+					\textbf{Protocolos de interacción} & La aplicación sólo es accesible
+					mediante el navegador al ser una página web. Sin embargo tiene un formato que permite su acceso desde PC, Tablet o Smartphone.\\
 					\hline
-					\textbf{Control de flujo} & \\
+					\textbf{Control de flujo} & El flujo de la aplicación consistirá en el uso
+					de un motor de inferencias y una serie de preguntas cuya respuesta almacenará hechos en una base del conocimiento. Eventualmente la aplicación alcanzará una conclusión.\\
 					\hline
-					\textbf{Soporte para CommonKADS} & \\
+					\textbf{Soporte para CommonKADS} & Vamos a emplear Aptana Studio para el
+					desarrollo de la aplicación web, Git para realizar el proyecto de forma colaborativa y el plugin TeXlipse para Aptana para el desarrollo de los modelos CommonKADS en Latex.\\
 					\hline
 				\end{tabular}
 			\end{center}
